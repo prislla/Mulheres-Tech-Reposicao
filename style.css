@@ -20,12 +20,19 @@
     width: auto;
     height: 200px;
 }
-.social img{
+.sociais img{
     width: 70px;
     height: 70px;
     border-radius: 50px;
     padding: 20px;
 }
-.social a {
+.sociais a {
     padding: 20px;
+}
+.imagem img {
+    width: 100%;
+    height: 350px;
+}
+.imagem h4 {
+    text-align: center;
 }
