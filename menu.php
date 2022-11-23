@@ -19,9 +19,9 @@
           Atividades
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="spinning.html">Spinning</a>
-          <a class="dropdown-item" href="jumpp.html">Jumpp</a>
-          <a class="dropdown-item" href="funcional.html">Funcional</a>
+          <a class="dropdown-item" href="#">Spinning</a>
+          <a class="dropdown-item" href="#">Jumpp</a>
+          <a class="dropdown-item" href="#">Funcional</a>
 
         </div>
       </li>
@@ -31,9 +31,9 @@
           Loja
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="roupas.html">Roupas</a>
-          <a class="dropdown-item" href="suplementos.html">Suplementos</a>
-          <a class="dropdown-item" href="diversos.html">Diversos</a>
+          <a class="dropdown-item" href="roupas.php">Roupas</a>
+          <a class="dropdown-item" href="suplementos.php">Suplementos</a>
+          <a class="dropdown-item" href="diversos.php">Diversos</a>
 
         </div>
       </li>
