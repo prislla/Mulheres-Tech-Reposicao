@@ -1,5 +1,5 @@
 
-
+<hr>
   <div class="container-fluid">
     <div class="row text-center bg-light">
       <div class="col-md-3">
@@ -35,6 +35,7 @@
       
  <div class="row text-center">
         <div class="col-md-12 sociais">
+        <h4>Redes sociais</h4>
           <a href="https://pt-br.facebook.com/" target="_blank"><img src="img/face.jpg"></a>
           <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.jpg"></a>
           <a href="https://www.whatsapp.com/?lang=pt_br" target="_blank"><img src="img/whats.jpg"></a>

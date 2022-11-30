@@ -19,7 +19,7 @@
           Atividades
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Spinning</a>
+          <a class="dropdown-item" href="spinning.php">Spinning</a>
           <a class="dropdown-item" href="#">Jumpp</a>
           <a class="dropdown-item" href="#">Funcional</a>
 
@@ -33,7 +33,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="roupas.php">Roupas</a>
           <a class="dropdown-item" href="suplementos.php">Suplementos</a>
-          <a class="dropdown-item" href="diversos.php">Diversos</a>
+          <a class="dropdown-item" href="acessorios.php">Acessórios</a>
 
         </div>
       </li>

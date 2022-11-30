@@ -1,6 +1,7 @@
 .imagens img {
     width: 100%;
     height: 300px;
+
 }
 
 .conteudo {
@@ -23,7 +24,6 @@
 .sociais img{
     width: 70px;
     height: 70px;
-    border-radius: 50px;
     padding: 20px;
 }
 .sociais a {

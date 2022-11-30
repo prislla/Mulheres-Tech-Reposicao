@@ -9,7 +9,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 text-center">
-               <h1>Moda Fitness Body Movement</h1>
+               <h1>Acessórios Fitness</h1>
             </div>
 
         </div>
@@ -20,40 +20,26 @@
         <div class="row">
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
-                     <img class="card-img-top" src="img/calcio.jpg" alt="Calcio">
+                     <img class="card-img-top" src="img/garrafa.jpg" alt="Squeeze">
                      <div class="card-body">
-                        <h3 class="card-text">Cálcio</h3>
-                        <p class="card-text">R$ 25,00</p>
+                        <h3 class="card-text">Squeeze</h3>
+                        <p class="card-text">R$ 30,00</p>
                         <!-- Botão para acionar modal -->
-                           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#calcio">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#squeeze">
                             Comprar
-                           </button>
+                          </button>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-3">
                 <div class="card" style="width: 18rem;">
-                     <img class="card-img-top" src="img/colageno.jpg" alt="Colageno">
+                     <img class="card-img-top" src="img/combo.jpg" alt="Combo treino">
                      <div class="card-body">
-                        <h3 class="card-text">Colágeno</h3>
-                        <p class="card-text">R$ 80,00</p>
+                        <h3 class="card-text">Combo treino</h3>
+                        <p class="card-text">R$ 40,00</p>
                         <!-- Botão para acionar modal -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colageno">
-                             Comprar
-                            </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-3">
-            <div class="card" style="width: 18rem;">
-                     <img class="card-img-top" src="img/whey.jpg.jpg" alt="Whey protein">
-                     <div class="card-body">
-                     <h3 class="card-text">Whey Protein</h3>
-                        <p class="card-text">R$ 250,00</p>
-                          <!-- Botão para acionar modal -->
-                          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#wheyProtein">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#comboTreino">
                             Comprar
                           </button>
                     </div>
@@ -62,12 +48,26 @@
 
             <div class="col-md-3">
             <div class="card" style="width: 18rem;">
-                     <img class="card-img-top" src="img/colageno.jpg" alt="Colageno pro">
+                     <img class="card-img-top" src="img/corda.jpg" alt="Corda elastica">
                      <div class="card-body">
-                        <h3 class="card-text">Colágeno Pro</h3>
-                        <p class="card-text">R$ 150,00</p>
+                     <h3 class="card-text">Corda elástica</h3>
+                        <p class="card-text">R$ 50,00</p>
                         <!-- Botão para acionar modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#colagenoPro">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#corda">
+                            Comprar
+                          </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                     <img class="card-img-top" src="img/combo.jpg" alt="Combo trainer">
+                     <div class="card-body">
+                        <h3 class="card-text">Combo trainer</h3>
+                        <p class="card-text">R$ 50,00</p>
+                        <!-- Botão para acionar modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#trainer">
                             Comprar
                           </button>
                     </div>
@@ -81,19 +81,19 @@
 
 
 
-<!-- Modal -->
-<div class="modal fade" id="calcio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal -->
+<div class="modal fade" id="squeeze" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Cálcio</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Squeeze</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <img class="card-img-top" src="img/calcio.jpg" alt="Calcio">
-        Suplemento de Cálcio e Vitamina D em cápsulas
+      <img class="card-img-top" src="img/garrafa.jpg" alt="Squeeze">
+      Garrafa Squeeze 700ml
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -103,18 +103,18 @@
   </div>
 </div>
 
-<div class="modal fade" id="colageno" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="combotreino" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Colágeno</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Combo Treino</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <img class="card-img-top" src="img/colageno.jpg" alt="Colageno">
-        Colágeno + Ácido Hialurônico
+      <img class="card-img-top" src="img/combo.jpg" alt="Combo treino">
+      Acompanha rolo de exercícios + Extensor elástico
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -124,18 +124,18 @@
   </div>
 </div>
 
-<div class="modal fade" id="wheyProtein" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="corda" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Whey Protein</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Corda Elástica</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <img class="card-img-top" src="img/whey.jpg.jpg" alt="Whey protein">
-        Whey Protein
+      <img class="card-img-top" src="img/corda.jpg" alt="Corda elastica">
+      Corda Elástica com 2 metros
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -145,18 +145,18 @@
   </div>
 </div>
 
-<div class="modal fade" id="colagenoPro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="trainer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Colágeno Pro</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Combo Trainer</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-      <img class="card-img-top" src="img/colageno.jpg" alt="Colageno pro">
-        Colágeno Pro
+      <img class="card-img-top" src="img/combo.jpg" alt="Combo trainer">
+      Acompanha rolo de exercícios + Extensor elástico
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
@@ -165,7 +165,6 @@
     </div>
   </div>
 </div>
-
 
 
 
