@@ -7,7 +7,7 @@
 <div class="container-fluid texto">
     <div class="row">
       <div class="col-md-12 text-center">
-      <h1>Saiba mais sobre os benefícios do Spinning</h1>
+      <h1>Modalidades do Spinning</h1>
         <img src="img/spinningcapa.jpg"class="img-fluid">
       </div>
     </div>
@@ -20,9 +20,8 @@
         <img src="img/spinning1.jpg" class="img-fluid">
       </div>
       <div class="col-md-6 col-sm">
-        <h3>Spinning emagrece e Alivia impacto nas articulações e joelhos</h3>
-        <p>Logo de início já é possível garantir que spinning emagrece, por isso, a modalidade é altamente recomendada para quem quer perder peso, tonificar músculos e ganhar resistência e condicionamento.  Em uma aula de cerca de 45 minutos é possível queimar até 600 calorias.</p>
-        <p>Ele consiste em praticar atividades aeróbicas sobre um pequeno trampolim ou cama elástica, geralmente com o auxílio de música, para dar aquele ânimo. Além dos passos e saltos ritmados, o jump envolve bastante a prática de corridas estáticas, também.</p>
+        <h3>Montanha</h3>
+        <p>Neste treino é possível proporcionar a simulação de um terreno inclinado onde os membros inferiores trabalharão com mais intensidade, em relação a força e potência. Trata-se de um treino que mistura capacidades anaeróbias e aeróbias, trabalha tanto condicionamento físico quanto resistência física. Tem um gasto calórico alto.</p>
       </div>
     </div>
   </div>
@@ -30,9 +29,10 @@
   <div class="container-fluid text-center conteudo">
     <div class="row">
       <div class="col-md-6 col-sm">
-        <h3>Hidroginástica</h3>
-        <p>A hidroginástica é exatamente isso, são exercícios dentro da água que contam com a possibilidade de realizar exercícios aeróbios ou de força com impacto reduzido sobre as articulações de membro inferiores e coluna.</p>
-        <p>A hidroginástica é uma atividade corporal realizada em um ambiente aquático que proporciona diversos benefícios físicos e para saúde. A hidroginástica é um tipo de atividade física que virou moda na década de 1980 e, desde então, vem ganhando público continuamente.</p>
+        <h3>Intervalado</h3>
+        <p>Treino voltado para capacidade de condicionamento físico. Por conta das altas intensidades atingidas nesta aula, é possível aumentar o gasto calórico durante e após este treino, ele conta com uma série obrigatória de um treino HIIT (high intensity interval training), que permite que o gasto calórico seja ainda mais elevado. Ótimo treino para auxiliar no emagrecimento.
+Intervalado e Montanha</p>
+        <p>Treino que mistura 2 características. Platôs de treino que podem auxiliar no trabalho de resistência, fato que acontece no trecho de montanha da aula, e treino intervalado, de alta intensidade que proporciona alto gasto calórico e melhoria nos níveis de condicionamento.</p>
       </div>
       <div class="col-md-6 col-sm">
         <img src="img/spinning2.jpg" class="img-fluid">
@@ -47,9 +47,12 @@
         <img src="img/spinning3.jpg" class="img-fluid">
       </div>
       <div class="col-md-6 col-sm">
-        <h3>Spinning</h3>
-        <p>O spinning, também conhecido como ciclismo indoor, é um exercício aeróbico com mudanças constantes de ritmos feito em uma bicicleta ergométrica. É o exercício físico ideal para quem quer eliminar calorias e definir membros inferiores, deixando pernas mais torneadas e bumbum mais durinho</p>
-        <p>A bicicleta é uma grande aliada para quem busca queimar calorias, melhorar condicionamento físico e ainda definir os músculos de pernas e bumbum. E se você não pode pedalar nas ruas todos os dias, invista no spinning. A aula é feita em uma bicicleta ergométrica parada.</p>
+        <h3>Fat Burn</h3>
+        <p>Treino aeróbico de característica regenerativa. Diante dos demais treinos, por ter intensidade menor em longos trechos, é possível usar substrato de gordura como fonte de energia, o que favorece para o emagrecimento, como para o ganho e melhoria de resistência física.</p>
+        
+        <h3>Estrada</h3>
+        <p>É um longão. Treino sem descanso, intenso, como a ideia é não ter recuperação, trabalha resistências musculares e aeróbicas, e tem foco de uso no gordura como fonte de energia, já que é longo e não muito intenso. Conhecido como trabalho de endurance.</p>
+        <p>Dia da competição. A aula dividida em 2 blocos, de um treino intervalado, como foco de melhorar condicionamento físico e alavancar o gasto calórico. Na parte final o participante é convidado a fazer o melhor que conseguir, o mais intenso possível durante 15 segundos, simulando uma prova de ciclismo de verdade.</p>
       </div>
     </div>
 
