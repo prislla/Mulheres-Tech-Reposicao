@@ -1,5 +1,6 @@
 
 <hr>
+<footer class="footer navbar-fixed-bottom">
   <div class="container-fluid">
     <div class="row text-center bg-light">
       <div class="col-md-3">
