@@ -5,20 +5,22 @@
     <div class="row text-center bg-light">
       <div class="col-md-3">
         <h4>Institucional</h4>
-        <p><a class="navbar-link" href="#">Home</a></p>
+        <p><a class="navbar-link" href="index.php">Home</a></p>
         <p><a class="navbar-link" href="#">Nossa Academia</a></p>
         <p><a class="navbar-link" href="#">Conheça os Planos</a></p>
-        <p><a class="navbar-link" href="#">Área do Cliente</a></p>
+        <p><a class="navbar-link" href="formaluno.php">Área do Aluno</a></p>
+        <p><a class="navbar-link" href="formfunc.php">Administrativo</a></p>
+
+        
       </div>
 
       <div class="col-md-3">
         <h4>Atividades</h4>
-        <ul class="navbar-nav mr-auto">
-          <li class="navbar-item"><a class="navbar-link" href="#">Spinning</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#">Jump</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#">Hidroginástica</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="#">Pilates</a></li>
-        </ul>
+        <p><a class="navbar-link" href="#">Spinning</a></p>
+        <p><a class="navbar-link" href="#">Jump</a></p>
+        <p><a class="navbar-link" href="#">Hidroginástica</a></p>
+        <p><a class="navbar-link" href="#">Pilates</a></p>
+        
       </div>
 
       <div class="col-md-3">

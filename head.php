@@ -4,9 +4,7 @@
 <head>
   <!-- Meta tags Obrigatórias -->
   <meta charset="utf-8">
-
-  <link rel="icon" href="/img/favicon.jpg">
-
+  <link rel="icon" href="/img/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
@@ -20,8 +18,8 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-
+  <script src="../Scripts/cep.js"></script>
   
-  <title>Body movement</title>
+  <title>Body Movement</title>
 </head>
 </body>
