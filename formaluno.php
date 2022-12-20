@@ -18,14 +18,14 @@ require_once 'head.php';
             <div class="col-md-4">
                 <div class="form=group">
                     <label for="Name">Nome</label>
-                    <input type="text" class="form-control" placeholder="Seu nome">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome">
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form=group">
                     <label for="inputEmail">E-mail</label>
-                    <input type="email" class="form-control" placeholder="Seu e-mail">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail">
                 </div>
             </div>
 
@@ -45,7 +45,7 @@ require_once 'head.php';
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" onkeypress="$(this).mask('000.000.000-00');"
+                            <input type="text" class="form-control" id="cpf" name="CPF" onkeypress="$(this).mask('000.000.000-00');"
                                 placeholder="000.000.000-00">
                         </div>
                     </div>
@@ -53,22 +53,21 @@ require_once 'head.php';
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="formGroupExampleInput2">RG</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="RG">
+                            <input type="text" class="form-control" id="rg" name="RG" placeholder="RG">
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Data de Nascimento</label>
-                            <input type="date" class="form-control" id="formGroupExampleInput2"
-                                placeholder="Data de Nascimento">
+                            <input type="date" class="form-control" id="datadenascimento" name="data de nascimento">
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="telefone">Telefone</label>
-                            <input type="text" class="form-control" onkeypress="$(this).mask('(00)00000-0000')"
+                            <input type="text" class="form-control" id="telefone" name="telefone" onkeypress="$(this).mask('(00)00000-0000')"
                                 placeholder="(00) 00000-0000">
                         </div>
                     </div>
@@ -80,7 +79,7 @@ require_once 'head.php';
                                 <div class="form-group">
                                     <label for="cep">CEP</label>
                                     <input type="text" class="form-control" id="cep" name="cep"
-                                        onblur="pesquisacep(this.value);">
+                                        onblur="pesquisacep(this.value);" placeholder="00.000-000">
                                 </div>
                             </div>
 
@@ -88,7 +87,7 @@ require_once 'head.php';
                                 <div class="form-group">
                                     <label for="inputAddress">Endereço</label>
                                     <input type="text" class="form-control" id="rua" name="rua"
-                                        placeholder="Rua/Estrada/Avenida, nº ">
+                                        placeholder="Rua/Estrada/Avenida">
                                 </div>
                             </div>
 
@@ -103,7 +102,7 @@ require_once 'head.php';
                                 <div class="form-group">
                                     <label for="inputAddress2">Complemento</label>
                                     <input type="text" class="form-control" id="inputAddress2"
-                                        placeholder="Apartamento, hotel, casa, etc.">
+                                        placeholder="Apto, casa, etc.">
                                 </div>
                             </div>
 

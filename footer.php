@@ -6,7 +6,7 @@
       <div class="col-md-3">
         <h4>Institucional</h4>
         <p><a class="navbar-link" href="index.php">Home</a></p>
-        <p><a class="navbar-link" href="#">Nossa Academia</a></p>
+        <p><a class="navbar-link" href="about.php">Nossa Academia</a></p>
         <p><a class="navbar-link" href="#">Conheça os Planos</a></p>
         <p><a class="navbar-link" href="formaluno.php">Área do Aluno</a></p>
         <p><a class="navbar-link" href="formfunc.php">Administrativo</a></p>
@@ -16,10 +16,12 @@
 
       <div class="col-md-3">
         <h4>Atividades</h4>
-        <p><a class="navbar-link" href="#">Spinning</a></p>
-        <p><a class="navbar-link" href="#">Jump</a></p>
-        <p><a class="navbar-link" href="#">Hidroginástica</a></p>
-        <p><a class="navbar-link" href="#">Pilates</a></p>
+        <p><a class="navbar-link" href="spinning.php">Spinning</a></p>
+        <p><a class="navbar-link" href="jump.php">Jump</a></p>
+        <p><a class="navbar-link" href="hidro.php">Hidroginástica</a></p>
+        <p><a class="navbar-link" href="pilates.php">Pilates</a></p>
+        <p><a class="navbar-link" href="funcional.php">Funcional</a></p>
+
         
       </div>
 
