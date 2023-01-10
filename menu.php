@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<img src="img/movement.png">
   <a class="navbar-brand" href="index.php">Body Movement</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
     aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">

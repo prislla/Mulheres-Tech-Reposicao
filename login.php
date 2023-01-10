@@ -1,12 +1,18 @@
 <?php
 require_once 'head.php';
+require_once 'menu.php';
+include_once 'conexao.php';
+$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Login Page</title>
+    <title>Login</title>
 
     <!--Made with love by Mutiullah Samim -->
 
@@ -29,7 +35,7 @@ require_once 'head.php';
         <div class="d-flex justify-content-center h-100">
             <div class="card">
                 <div class="card-header">
-                    <h3>Sign In</h3>
+                    <h3>Faça Login</h3>
                     <div class="d-flex justify-content-end social_icon">
                         <span><i class="fab fa-facebook-square"></i></span>
                         <span><i class="fab fa-google-plus-square"></i></span>
@@ -37,19 +43,20 @@ require_once 'head.php';
                     </div>
                 </div>
                 <div class="card-body">
-                    <form>
+                    <form id="login-form" class="form" action="" method="post">
+
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
                             </div>
-                            <input type="text" class="form-control" placeholder="login">
+                            <input type="text" name="usuario" class="form-control" placeholder="login">
 
                         </div>
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="senha">
+                            <input type="password" name="senha" class="form-control" placeholder="senha">
                         </div>
                         <div class="row align-items-center remember">
                             <input type="checkbox">Lembrar

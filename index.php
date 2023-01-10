@@ -3,17 +3,37 @@ require_once 'head.php';
 require_once 'menu.php';
 ?>
  
- 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 text-center home">
-        <img src="https://img.freepik.com/fotos-gratis/homem-jovem-em-sportswear-um-classe-exercicio-em-um-ginasio_1150-12372.jpg?w=740&t=st=1673283087~exp=1673283687~hmac=1a8ff5b3b7beeb36a5ddec708b59ab970afea145428237e0513d1c0138c22056" class="img-fluid">
-      </div>
- 
+ <div class="carrossel">
+ <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="https://img.freepik.com/fotos-gratis/close-up-de-homem-fazendo-treino-de-crossfit_23-2149080427.jpg?w=740&t=st=1673376128~exp=1673376728~hmac=764c592147177e591966fed3ea6b0aad9164e3c13b44a5696f99a928876e267e/400x400?auto=yes&bg=777&fg=555&text=Primeiro Slide" alt="Primeiro Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://img.freepik.com/fotos-gratis/pessoa-no-ginasio-de-esporte-usando-kettlebells_23-2149255814.jpg?w=740&t=st=1673376270~exp=1673376870~hmac=3da0460a7050d52bfa1370472fd3acad60020a8c380653c03aabd787cf64cc73/400x400?auto=yes&bg=666&fg=444&text=Segundo Slide" alt="Segundo Slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="https://img.freepik.com/fotos-gratis/mulher-jovem-exercitar-condicao-fisica_144627-30725.jpg?w=740&t=st=1673376299~exp=1673376899~hmac=79996ab583d59ab4de96965a795fd7a9d84b431d11ed913fe6e4356919298c6a/400x400?auto=yes&bg=555&fg=333&text=Terceiro Slide" alt="Terceiro Slide">
     </div>
   </div>
- 
-  <div class="container-fluid texto">
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+</div>
+
+
+<div class="container-fluid texto">
     <div class="row">
       <div class="col-md-12 text-center">
         <h2>Conheça Algumas de Nossas Atividades</h2>
@@ -21,22 +41,6 @@ require_once 'menu.php';
     </div>
   </div>
  
-  <div class="container-fluid imagens">
-    <div class="row">
-      <div class="col-md-4">
-        <img src="https://img.freepik.com/fotos-gratis/homem-jovem-em-sportswear-um-classe-exercicio-em-um-ginasio_1150-12372.jpg?w=1380&t=st=1673277562~exp=1673278162~hmac=d6a1ccad41ee5fb7fb6e7bf32e1281a4b4505e2d92140ce0ac1bffd98a693b75" class="img-fluid">
-      </div>
- 
-      <div class="col-md-4">
-        <img src="https://img.freepik.com/fotos-gratis/pesos-de-exercicios-dumbbell-de-ferro-com-placas-extra_1423-223.jpg?w=1380&t=st=1673277566~exp=1673278166~hmac=a6c0b489a31afc775927d670527bd45079271e3bde8d24ecdc4b43f47b761b92" class="img-fluid">
-      </div>
- 
-      <div class="col-md-4">
-        <img src="https://img.freepik.com/fotos-gratis/halteres-em-um-fitness_335224-876.jpg?w=1380&t=st=1673277616~exp=1673278216~hmac=0514e058a83397a2ffa707e208af68882232b2fd410c97f0bc1ce47d115ad45d" class="img-fluid">
-      </div>
- 
-    </div>
-  </div>
  
   <div class="container-fluid text-center conteudo">
     <div class="row">

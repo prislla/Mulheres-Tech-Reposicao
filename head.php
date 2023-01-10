@@ -4,7 +4,7 @@
 <head>
   <!-- Meta tags Obrigatórias -->
   <meta charset="utf-8">
-  <link rel="icon" href="/img/favicon1.png">
+  <link rel="icon" href="/img/movement.png">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  
   <!-- Bootstrap CSS -->
@@ -13,6 +13,7 @@
  
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="styles.css">
  
  
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
