@@ -18,7 +18,8 @@ if (!empty($dadoslogin['btnlogin'])) {
 
  if(($resultado) AND ($resultado->rowCount()!= 0)){
     $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
-    var_dump($resposta);
+    var_dump($resposta); 
+    var_dump($dadoslogin);
 
      if(password_verify($dadoslogin['senha'], $resposta['senha'])){
         header("Location: adm.php");
