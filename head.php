@@ -13,7 +13,7 @@
  
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="about.css">
-  <link rel="stylesheet" href="styles.css">
+  <!--<link rel="stylesheet" href="styles.css"> -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;500&display=swap" rel="stylesheet">
