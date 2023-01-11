@@ -2,7 +2,38 @@
 require_once 'head.php';
 require_once 'menu.php';
 include_once 'conexao.php';
-$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+$dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+
+if (!empty($dadoslogin['btnlogin'])) {
+
+ $buscalogin = "SELECT matricula, nome, emailaluno, senha
+                        FROM aluno
+                        WHERE emailaluno =:usuario
+                        LIMIT 1";
+           
+ $resultado= $conn->prepare($buscalogin); 
+ $resultado->bindParam(':usuario', $dadoslogin['usuario'],PDO::PARAM_STR);
+ $resultado->execute();
+
+ if(($resultado) AND ($resultado->rowCount()!= 0)){
+    $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
+    var_dump($resposta);
+
+     if(password_verify($dadoslogin['senha'], $resposta['senha'])){
+        header("Location: adm.php");
+     }
+    else {
+        echo "Usuário ou Senha Inválido!";
+    }
+}
+    else {
+        echo "Usuário ou Senha Inválido!";
+    }
+
+           
+}
+
 
 ?>
 
@@ -43,7 +74,7 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
                     </div>
                 </div>
                 <div class="card-body">
-                    <form id="login-form" class="form" action="" method="post">
+                    <form id="login-form" class="form" action="" method="POST">
 
                         <div class="input-group form-group">
                             <div class="input-group-prepend">
@@ -62,7 +93,7 @@ $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
                             <input type="checkbox">Lembrar
                         </div>
                         <div class="form-group">
-                            <input type="submit" value="Login" class="btn float-right login_btn">
+                            <input type="submit" name="btnlogin" value="Login" class="btn float-right login_btn">
                         </div>
                     </form>
                 </div>

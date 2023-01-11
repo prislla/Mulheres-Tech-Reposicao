@@ -3,14 +3,7 @@
   require_once 'menu.php';
  
 ?>
- 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12 about">
-      <img src="\img\about.png">
-</div>
-</div>
-</div>
+
       
       <div class="container-fluid texto">
     <div class="row">
@@ -24,15 +17,7 @@
       </div>
     </div>
   </div>
-     
-  <div class="card">
-  <div class="card-body">
-    Isto é um texto dentro de um card.
-  </div>
-</div>
- 
- 
- 
+      
  
  
  
