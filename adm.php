@@ -1,15 +1,46 @@
 <?php
 require_once 'head.php';
-require_once 'menu.php';
+
+session_start();
+ob_start();
 
 ?>
+
+
+<h1 class="text-center">Área do Aluno</h1>
 
 
 <?php
+        echo "Bem vindo(a) " . $_SESSION['nome'];
+    ?>
 
-echo "ADM";
 
-?>
+<a href="logout.php"><button type="submit" class="btn btn-outline-dark">Sair</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

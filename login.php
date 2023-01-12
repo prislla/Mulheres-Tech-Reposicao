@@ -3,6 +3,9 @@ require_once 'head.php';
 require_once 'menu.php';
 include_once 'conexao.php';
 
+session_start();
+ob_start();
+
 echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
 
 $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -25,16 +28,24 @@ if (!empty($dadoslogin['btnlogin'])) {
 
      if(password_verify($dadoslogin['senha'], $resposta['senha'])){
         header("Location: adm.php");
+
+        $_SESSION['nome'] = $resposta['nome'];
+        header("Location: adm.php");
      }
      else {
-        echo "Usuário ou Senha Inválido!";
+        $_SESSION['msg'] = "Erro: Usuário ou Senha Inválido!";
       }
     }
     else {
-        echo "Usuário ou Senha Inválido!";
+        $_SESSION['msg'] = "Erro: Usuário ou Senha Inválido!";
     }
 
            
+}
+
+if(isset($_SESSION['msg'])){
+    echo $_SESSION['msg'];
+    unset($_SESSION['msg']);
 }
 
 
