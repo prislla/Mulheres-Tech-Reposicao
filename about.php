@@ -15,7 +15,7 @@
       <img class="d-block w-100" src="img/about.png" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/movement.png" alt="Segundo Slide">
+      <img class="d-block w-100" src="img/about.png" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="img/about.png" alt="Terceiro Slide">

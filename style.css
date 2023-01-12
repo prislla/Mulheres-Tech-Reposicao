@@ -8,6 +8,10 @@
 body {
     background-color: rgb(95, 94, 93);
 }
+.carousel-inner > .carousel-item > img {
+    width: 800px;
+    height: 500px; 
+  }
 
 .imagens img {
     width: 100%;

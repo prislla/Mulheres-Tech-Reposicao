@@ -3,6 +3,8 @@ require_once 'head.php';
 require_once 'menu.php';
 include_once 'conexao.php';
 
+echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
+
 $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if (!empty($dadoslogin['btnlogin'])) {
@@ -24,10 +26,10 @@ if (!empty($dadoslogin['btnlogin'])) {
      if(password_verify($dadoslogin['senha'], $resposta['senha'])){
         header("Location: adm.php");
      }
-    else {
+     else {
         echo "Usuário ou Senha Inválido!";
+      }
     }
-}
     else {
         echo "Usuário ou Senha Inválido!";
     }
