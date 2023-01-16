@@ -6,7 +6,7 @@ include_once 'conexao.php';
 session_start();
 ob_start();
 
-//echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
+echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
 
 $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 

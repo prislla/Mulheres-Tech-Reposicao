@@ -78,7 +78,7 @@ require_once 'head.php';
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="cep">CEP</label>
-                                    <input type="text" class="form-control" id="cep" name="cep"
+                                    <input type="text" class="form-control" id="cep" name="CEP"
                                         onblur="pesquisacep(this.value);" placeholder="00.000-000">
                                 </div>
                             </div>
