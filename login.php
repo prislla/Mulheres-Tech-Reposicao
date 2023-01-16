@@ -6,7 +6,7 @@ include_once 'conexao.php';
 session_start();
 ob_start();
 
-echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
+//echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
 
 $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -23,8 +23,8 @@ if (!empty($dadoslogin['btnlogin'])) {
 
  if(($resultado) AND ($resultado->rowCount()!= 0)){
     $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
-    var_dump($resposta); 
-    var_dump($dadoslogin);
+    //var_dump($resposta); 
+    //var_dump($dadoslogin);
 
      if(password_verify($dadoslogin['senha'], $resposta['senha'])){
         header("Location: adm.php");

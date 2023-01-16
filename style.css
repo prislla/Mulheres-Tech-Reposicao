@@ -95,6 +95,10 @@ footer h4 {
 .sociais a {
     padding: 20px;
 }
+.sociais a img:hover {
+    transform: scale(1.3);
+    transition: 0.5s;
+}
 .copy {
     text-align: center;
     padding: 10px;

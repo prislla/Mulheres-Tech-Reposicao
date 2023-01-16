@@ -7,5 +7,6 @@ unset($_SESSION['nome']);
 $_SESSION['msg'] = "Sessão Encerrada!";
 header("Location: login.php");
 
+
 ?>
 

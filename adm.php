@@ -12,6 +12,11 @@ ob_start();
 
 <?php
         echo "Bem vindo(a) " . $_SESSION['nome'];
+
+        if(!isset($_SESSION['nome'])){
+            $_SESSION['msg'] = "Erro: Necessário realizar o login para acessar a página!";
+            header("Location: login.php");
+        }
     ?>
 
 
