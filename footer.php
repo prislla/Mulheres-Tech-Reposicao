@@ -8,7 +8,7 @@
         <p><a class="navbar-link" href="index.php">Home</a></p>
         <p><a class="navbar-link" href="about.php">Nossa Academia</a></p>
         <p><a class="navbar-link" href="#">Conheça os Planos</a></p>
-        <p><a class="navbar-link" href="formaluno.php">Área do Aluno</a></p>
+        <p><a class="navbar-link" href="login.php">Área do Aluno</a></p>
         <p><a class="navbar-link" href="formfunc.php">Administrativo</a></p>
 
         

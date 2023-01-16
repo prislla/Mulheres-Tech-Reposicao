@@ -28,6 +28,7 @@ html,body{
     .social_icon span:hover{
     color: white;
     cursor: pointer;
+    transition: 0.5s;
     }
     
     .card-header h3{
@@ -74,6 +75,7 @@ html,body{
     .login_btn:hover{
     color: black;
     background-color: white;
+    transition: 0.5s;
     }
     
     .links{
@@ -82,4 +84,12 @@ html,body{
     
     .links a{
     margin-left: 4px;
+    }
+    .card-footer a{
+        color: rgb(78, 245, 203);
+        text-decoration: none;
+        }
+    .card-footer a:hover {
+        color: #ffffff;
+    transition: 0.5s;
     }
