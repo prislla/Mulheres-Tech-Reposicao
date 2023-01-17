@@ -137,14 +137,15 @@ require_once '../includes/head.php';
                             <div>   
                             <div class="col-md-6">
                                         <div class="form-group">
-                                        <label for="pass">Password (Mínimo de 8 caracteres):</label>
-                                        <input type="password" id="pass" name="senha" minlength="8" required>
+                                        <label for="pass">Senha (Mínimo de 8 caracteres):</label>
+                                        <input type="password" id="pass" name="senha"  required>
+                                        <!-- colocar minlength="8" depois do name senha, obriga a colocar pelo menos 8 caracteres-->
                             </div>  
                             </div>
 
                             <div class="col-md-4">
                                         <div class="form-group">
-                                            <label for="uf">foto</label>
+                                            <label for="uf">Sua foto aqui</label>
                                             <p>
                                                 <input type="text" class="form-control" id="uf" name="foto">
                                         </div>

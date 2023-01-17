@@ -68,39 +68,3 @@ color: #3FA689;
 .mapa h4 {
     color: #3FA689;
 }
-footer h4 {
-    color: #3FA689;
-    padding: 20px;
-}
-.social p a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-}
-.social p a:hover {
-    color: rgb(78, 75, 75);
-    transition: 0.5s;
-}
-.socialfun {
-    color: white;
-}
-.sociais h4 {
-    text-align: center;
-}
-.sociais img{
-    width: 70px;
-    height: 70px;
-    padding: 20px;
-    border-radius: 50%;
-}
-.sociais a {
-    padding: 20px;
-}
-.sociais a img:hover {
-    transform: scale(1.3);
-    transition: 0.5s;
-}
-.copy {
-    text-align: center;
-    padding: 10px;
-}
-

@@ -7,6 +7,8 @@ ob_start();
 ?>
 
 
+
+
 <h1 class="text-center">Área do Aluno</h1>
 <h2 class='text-center'>Olá, <?php echo $_SESSION['nome']?>! Seja bem 
 
@@ -21,14 +23,16 @@ ob_start();
              ?>
 </h2>
 
-<div class="perfil">
-<img src="<?php echo $_SESSION['foto'] ?>">
+<section id="sobre">
+    <img src="<?php echo $_SESSION['foto'] ?>">          
+<div>            
 <ul>
 <li>Nome: <?php echo $_SESSION['nome'] ?></li>
 <li>Data de Nascimento: <?php echo $_SESSION['datanascimento'] ?></li>
 </ul>
 </div>
-</div>
+</section>
+
 
 <?php
 
@@ -39,7 +43,7 @@ ob_start();
     ?>
 
 
-<a href="../pages/logout.php"><button type="submit" class="btn btn-outline-dark">Sair</button>
+<a href="../pages/logout.php"><button type="submit" class="btn btn-outline-dark">Sair</button></a>
 
 
 

@@ -1,4 +1,6 @@
 
+<link rel="stylesheet" href="../includes/footer.css">
+  
 
 <footer class="footer navbar-fixed-bottom">
   <div class="container-fluid">
@@ -46,7 +48,7 @@
           <a href="https://www.whatsapp.com/?lang=pt_br" target="_blank"><img src="../img/whats.jpg"></a>
         </div>
       </div>
-      <div class=copy>&copy; 2023 Body Movement</div>
+      <div class=copy>Copyright &copy; 2023 Body Movement</div>
   </div>
     </div>
 

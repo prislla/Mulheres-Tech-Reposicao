@@ -1,3 +1,11 @@
-.perfil img {
+section img {
+    height: 200px;
+    border-radius: 100%;
+    border: 2px solid #0a634f;
+    margin-right: 30px;
     border-radius: 50%;
+
+}
+li {
+    text-align: center;
 }

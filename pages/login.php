@@ -17,11 +17,11 @@ if (!empty($dadoslogin['btnlogin'])) {
                         WHERE emailaluno =:usuario
                         LIMIT 1";
            
- $resultado= $conn->prepare($buscalogin); 
+ $resultado = $conn->prepare($buscalogin); 
  $resultado->bindParam(':usuario', $dadoslogin['usuario'],PDO::PARAM_STR);
  $resultado->execute();
 
- if(($resultado) AND ($resultado->rowCount()!= 0)){
+ if (($resultado) AND ($resultado->rowCount() != 0)){
     $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
     //var_dump($resposta); 
     //var_dump($dadoslogin);
