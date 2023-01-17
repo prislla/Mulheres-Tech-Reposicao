@@ -170,7 +170,7 @@
 
 
     <?php
-        require_once '../includes/footer.php';
+        require_once '../includes/foot/footer.php';
 
     ?>
  

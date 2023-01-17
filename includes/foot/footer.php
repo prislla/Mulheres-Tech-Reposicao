@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="../includes/footer.css">
+<link rel="stylesheet" href="../includes/foot/footer.css">
   
 
 <footer class="footer navbar-fixed-bottom">

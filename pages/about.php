@@ -6,10 +6,10 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-    <h1 class="display-4">Body Movement - Nossa história</h1>
-    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+    <h1 class="display-4"><strong>Body Movement</strong></h1>
+    <p class="lead">Mais que uma academia. Um lugar para cuidar da saúde física, mental e garantir o bem-estar!</p>
   </div>
-</div>
+</div> 
 
 <div class="accordion" id="accordionExample">
   <div class="card">
@@ -114,6 +114,6 @@
 
 
 <?php
-        require_once '../includes/footer.php';
+        require_once '../includes/foot/footer.php';
 
     ?>

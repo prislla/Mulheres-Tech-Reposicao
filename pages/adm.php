@@ -51,7 +51,7 @@ ob_start();
 
 
 <?php
-require '../includes/footer.php'
+require '../includes/foot/footer.php'
 ?>
 
 

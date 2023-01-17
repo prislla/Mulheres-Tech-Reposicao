@@ -103,6 +103,6 @@ Para a sua realização, o treinamento funcional utiliza elásticos, cordas, bol
  
  
   <?php
-      require_once 'includes/footer.php';
+      require_once 'includes/foot/footer.php';
     ?>
  

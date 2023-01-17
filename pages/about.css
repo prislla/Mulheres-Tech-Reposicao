@@ -6,5 +6,13 @@
     text-align: center;
     padding: 10px;
   }
-.accordion h3 {
-text-decoration: none;}
+  .display-4 {
+    color:#065c45;
+  }
+  .lead {
+    color:#052c22;
+    font-size: 100px;
+  }
+.btn-link h3 {
+color: #3FA689; 
+}

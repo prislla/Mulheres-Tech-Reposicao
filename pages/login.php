@@ -143,6 +143,6 @@ if(isset($_SESSION['msg'])){
 
 
 <?php
-        require_once '../includes/footer.php';
+        require_once '../includes/foot/footer.php';
 
     ?>

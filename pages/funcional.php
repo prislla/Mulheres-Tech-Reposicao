@@ -89,6 +89,6 @@ Porque segundo as orientações da ACSM (American College of Sports Medicine), t
 
 
 <?php
-        require_once '../includes/footer.php';
+        require_once '../includes/foot/footer.php';
 
     ?>

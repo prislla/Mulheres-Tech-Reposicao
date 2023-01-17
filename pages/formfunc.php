@@ -164,5 +164,5 @@ require_once '../includes/head.php';
 
 <hr>
 <?php
-      require_once '../includes/footer.php';
+      require_once '../includes/foot/footer.php';
     ?>
