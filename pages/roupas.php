@@ -1,6 +1,6 @@
 <?php
-  require_once 'head.php';
-  require_once 'menu.php';
+  require_once '../includes/head.php';
+  require_once '../includes/menu.php';
 
 ?>  
 
@@ -172,7 +172,7 @@
 
 
     <?php
-        require_once 'footer.php';
+        require_once '../includes/footer.php';
 
     ?>
  

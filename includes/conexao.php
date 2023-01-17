@@ -1,5 +1,6 @@
 <?php
 
+//Ligação com o bd
 $host = "localhost";
 $user = "root";
 $pass = "";

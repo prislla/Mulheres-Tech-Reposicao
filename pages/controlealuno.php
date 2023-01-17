@@ -1,5 +1,5 @@
 <?php
-    include_once 'conexao.php';
+    include_once '../includes/conexao.php';
 
 try{
     $dadoscad = filter_input_array(INPUT_POST, FILTER_DEFAULT);

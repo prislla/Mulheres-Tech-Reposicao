@@ -1,6 +1,6 @@
 <?php
-require_once 'head.php';
-require_once 'menu.php';
+require_once 'includes/head.php';
+require_once 'includes/menu.php';
 ?>
  
  <div class="carrossel">
@@ -45,7 +45,7 @@ require_once 'menu.php';
   <div class="container-fluid text-center conteudo">
     <div class="row">
       <div class="col-md-6 col-sm">
-        <a href="jump.php"><img src="https://img.freepik.com/fotos-gratis/retrato-de-um-grupo-de-duas-meninas-em-trampolins-de-fitness-de-ginastica-na-academia_496169-1405.jpg?w=1380&t=st=1673278724~exp=1673279324~hmac=8a1a20f54ab777cb167ce84902b0f99e731cf69026dc686af7ce4601191a9977" class="img-fluid"></a>
+        <a href="../pages/jump.php"><img src="https://img.freepik.com/fotos-gratis/retrato-de-um-grupo-de-duas-meninas-em-trampolins-de-fitness-de-ginastica-na-academia_496169-1405.jpg?w=1380&t=st=1673278724~exp=1673279324~hmac=8a1a20f54ab777cb167ce84902b0f99e731cf69026dc686af7ce4601191a9977" class="img-fluid"></a>
       </div>
       <div class="col-md-6 col-sm">
         <h3>Jumpp</h3>
@@ -63,7 +63,7 @@ require_once 'menu.php';
         <p>A hidroginástica é uma atividade corporal realizada em um ambiente aquático que proporciona diversos benefícios físicos e para saúde. A hidroginástica é um tipo de atividade física que virou moda na década de 1980 e, desde então, vem ganhando público continuamente.</p>
       </div>
       <div class="col-md-6 col-sm">
-        <a href="hidro.php"><img src="https://img.freepik.com/fotos-gratis/grupo-de-fitness-de-meninas-fazendo-exercicios-aerobicos-na-piscina-do-parque-aquatico-atividades-esportivas-e-de-lazer_627829-10857.jpg?w=1380&t=st=1673278651~exp=1673279251~hmac=6351b18ca7f4a005fd902f05343b4fc25d2431ef8707749b45f5befd1a30c629" class="img-fluid"></a>
+        <a href="../pages/hidro.php"><img src="https://img.freepik.com/fotos-gratis/grupo-de-fitness-de-meninas-fazendo-exercicios-aerobicos-na-piscina-do-parque-aquatico-atividades-esportivas-e-de-lazer_627829-10857.jpg?w=1380&t=st=1673278651~exp=1673279251~hmac=6351b18ca7f4a005fd902f05343b4fc25d2431ef8707749b45f5befd1a30c629" class="img-fluid"></a>
        </div>
     </div>
   </div>
@@ -71,7 +71,7 @@ require_once 'menu.php';
   <div class="container-fluid text-center conteudo">
     <div class="row">
       <div class="col-md-6 col-sm">
-        <a href="spinning.php"><img src="https://img.freepik.com/fotos-gratis/maos-de-um-homem-que-treina-em-um-ginasio-que-faz-o-ciclo-interno_1139-1715.jpg?w=1380&t=st=1673278500~exp=1673279100~hmac=c8412c9e841bd8fbc89cd45acde0c02068a6c61c766f06c0955a6dd9b831e4fd" class="img-fluid"></a>
+        <a href="../pages/spinning.php"><img src="https://img.freepik.com/fotos-gratis/maos-de-um-homem-que-treina-em-um-ginasio-que-faz-o-ciclo-interno_1139-1715.jpg?w=1380&t=st=1673278500~exp=1673279100~hmac=c8412c9e841bd8fbc89cd45acde0c02068a6c61c766f06c0955a6dd9b831e4fd" class="img-fluid"></a>
       </div>
       <div class="col-md-6 col-sm">
         <h3>Spinning</h3>
@@ -95,7 +95,7 @@ Pode ser praticado em grupos, mas também pode acontecer como um treinamento ind
 Para a sua realização, o treinamento funcional utiliza elásticos, cordas, bolas, cones, discos e hastes.</p>
       </div>
       <div class="col-md-6 col-sm">
-        <a href="funcional.php"><img src="https://img.freepik.com/fotos-gratis/pessoa-no-ginasio-de-esporte-usando-kettlebells_23-2149255814.jpg?w=1380&t=st=1673278425~exp=1673279025~hmac=d6b499220db0b41a112a97b98074f467ff0b54497bb3492726df1f9ed1ae1461" class="img-fluid"></a>
+        <a href="../pages/funcional.php"><img src="https://img.freepik.com/fotos-gratis/pessoa-no-ginasio-de-esporte-usando-kettlebells_23-2149255814.jpg?w=1380&t=st=1673278425~exp=1673279025~hmac=d6b499220db0b41a112a97b98074f467ff0b54497bb3492726df1f9ed1ae1461" class="img-fluid"></a>
  
       </div>
     </div>
@@ -103,6 +103,6 @@ Para a sua realização, o treinamento funcional utiliza elásticos, cordas, bol
  
  
   <?php
-      require_once 'footer.php';
+      require_once 'includes/footer.php';
     ?>
  

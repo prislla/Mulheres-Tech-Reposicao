@@ -1,6 +1,6 @@
 <?php
-  require_once 'head.php';
-  require_once 'menu.php';
+  require_once '../includes/head.php';
+  require_once '../includes/menu.php';
 
 ?> 
 
@@ -12,13 +12,13 @@
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="img/about.png" alt="Primeiro Slide">
+      <img class="d-block w-100" src="../img/about.png" alt="Primeiro Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/about.png" alt="Segundo Slide">
+      <img class="d-block w-100" src="../img/about.png" alt="Segundo Slide">
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="img/about.png" alt="Terceiro Slide">
+      <img class="d-block w-100" src="../img/about.png" alt="Terceiro Slide">
     </div>
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -97,7 +97,7 @@
 <h4>Saiba mais sobre nossas atividades.</h4> 
 
 <div>
-<a href="index.php"><button type="submit" class="btn btn-outline-dark">Clique aqui</button><a>
+<a href="../index.php"><button type="submit" class="btn btn-outline-dark">Clique aqui</button><a>
 </div>
 
 
@@ -134,6 +134,6 @@
 
 
 <?php
-        require_once 'footer.php';
+        require_once '../includes/footer.php';
 
     ?>

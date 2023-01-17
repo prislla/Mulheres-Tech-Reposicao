@@ -1,5 +1,5 @@
 <?php
-require_once 'head.php';
+require_once '../includes/head.php';
 ?>
 
 <div class="container-fluid texto">
@@ -168,5 +168,5 @@ require_once 'head.php';
 
 <hr>
 <?php
-      require_once 'footer.php';
+      require_once '../includes/footer.php';
     ?>

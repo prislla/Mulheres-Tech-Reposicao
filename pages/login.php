@@ -1,7 +1,7 @@
 <?php
-require_once 'head.php';
-require_once 'menu.php';
-include_once 'conexao.php';
+require_once '../includes/head.php';
+require_once '../includes/menu.php';
+include_once '../includes/conexao.php';
 
 session_start();
 ob_start();
@@ -12,7 +12,7 @@ $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
 if (!empty($dadoslogin['btnlogin'])) {
 
- $buscalogin = "SELECT matricula, nome, emailaluno, senha
+ $buscalogin = "SELECT matricula, nome, emailaluno, senha, foto, sexo, datanascimento
                         FROM aluno
                         WHERE emailaluno =:usuario
                         LIMIT 1";
@@ -27,10 +27,13 @@ if (!empty($dadoslogin['btnlogin'])) {
     //var_dump($dadoslogin);
 
      if(password_verify($dadoslogin['senha'], $resposta['senha'])){
-        header("Location: adm.php");
+      $_SESSION['nome'] = $resposta['nome'];
+      $_SESSION['foto'] = $resposta['foto'];
+      $_SESSION['sexo'] = $resposta ['sexo'];
+      $_SESSION['datanascimento'] = $resposta['datanascimento'];
 
-        $_SESSION['nome'] = $resposta['nome'];
-        header("Location: adm.php");
+        header("Location:../pages/adm.php");
+
      }
      else {
         $_SESSION['msg'] = "Erro: Usuário ou Senha Inválido!";
@@ -113,7 +116,7 @@ if(isset($_SESSION['msg'])){
                 </div>
                 <div class="card-footer">
                     <div class="d-flex justify-content-center links">
-                        Não tem conta?<a href="formaluno.php">Cadastre-se aqui!</a>
+                        Não tem conta?<a href="../pages/formaluno.php">Cadastre-se aqui!</a>
                     </div>
                     <div class="d-flex justify-content-center">
                         <a href="#">Esqueceu sua senha?</a>
@@ -140,6 +143,6 @@ if(isset($_SESSION['msg'])){
 
 
 <?php
-        require_once 'footer.php';
+        require_once '../includes/footer.php';
 
     ?>

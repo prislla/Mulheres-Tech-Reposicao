@@ -5,22 +5,22 @@
     <div class="row text-center bg-dark">
       <div class="col-md-3 social">
         <h4>Institucional</h4>
-        <p><a class="navbar-link" href="index.php">Home</a></p>
-        <p><a class="navbar-link" href="about.php">Nossa Academia</a></p>
+        <p><a class="navbar-link" href="../index.php">Home</a></p>
+        <p><a class="navbar-link" href="../pages/about.php">Nossa Academia</a></p>
         <p><a class="navbar-link" href="#">Conheça os Planos</a></p>
-        <p><a class="navbar-link" href="login.php">Área do Aluno</a></p>
-        <p><a class="navbar-link" href="formfunc.php">Administrativo</a></p>
+        <p><a class="navbar-link" href="../pages/login.php">Área do Aluno</a></p>
+        <p><a class="navbar-link" href="../pages/formfunc.php">Administrativo</a></p>
 
         
       </div>
 
       <div class="col-md-3 social">
         <h4>Atividades</h4>
-        <p><a class="navbar-link" href="spinning.php">Spinning</a></p>
-        <p><a class="navbar-link" href="jump.php">Jump</a></p>
-        <p><a class="navbar-link" href="hidro.php">Hidroginástica</a></p>
-        <p><a class="navbar-link" href="pilates.php">Pilates</a></p>
-        <p><a class="navbar-link" href="funcional.php">Funcional</a></p>
+        <p><a class="navbar-link" href="../pages/spinning.php">Spinning</a></p>
+        <p><a class="navbar-link" href="../pages/jump.php">Jump</a></p>
+        <p><a class="navbar-link" href="../pages/hidro.php">Hidroginástica</a></p>
+        <p><a class="navbar-link" href="../pages/pilates.php">Pilates</a></p>
+        <p><a class="navbar-link" href="../pages/funcional.php">Funcional</a></p>
 
         
       </div>
@@ -41,9 +41,9 @@
       
         <div class="col-md-12 sociais">
         <h4>Redes sociais</h4>
-          <a href="https://pt-br.facebook.com/" target="_blank"><img src="img/face.jpg"></a>
-          <a href="https://www.instagram.com/" target="_blank"><img src="img/insta.jpg"></a>
-          <a href="https://www.whatsapp.com/?lang=pt_br" target="_blank"><img src="img/whats.jpg"></a>
+          <a href="https://pt-br.facebook.com/" target="_blank"><img src="../img/face.jpg"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="../img/insta.jpg"></a>
+          <a href="https://www.whatsapp.com/?lang=pt_br" target="_blank"><img src="../img/whats.jpg"></a>
         </div>
       </div>
       <div class=copy>&copy; 2023 Body Movement</div>
@@ -56,7 +56,7 @@
       
 
 
-
+    <script src="../script.js"></script>
   <!-- JavaScript (Opcional) -->
   <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

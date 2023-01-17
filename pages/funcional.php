@@ -1,6 +1,6 @@
 <?php
-  require_once 'head.php';
-  require_once 'menu.php';
+  require_once '../includes/head.php';
+  require_once '../includes/menu.php';
 
 ?> 
 
@@ -89,6 +89,6 @@ Porque segundo as orientações da ACSM (American College of Sports Medicine), t
 
 
 <?php
-        require_once 'footer.php';
+        require_once '../includes/footer.php';
 
     ?>

@@ -1,6 +1,6 @@
 <?php
-  require_once 'head.php';
-  require_once 'menu.php';
+  require_once '../includes/head.php';
+  require_once '../includes/menu.php';
 
 ?>
 
@@ -8,7 +8,7 @@
     <div class="row">
       <div class="col-md-12 text-center">
       <h1>Modalidades do Spinning</h1>
-        <img src="img/spinningcapa.jpg"class="img-fluid">
+        <img src="../img/spinningcapa.jpg"class="img-fluid">
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
   <div class="container-fluid text-center conteudo">
     <div class="row">
       <div class="col-md-6 col-sm">
-        <img src="img/spinning1.jpg" class="img-fluid">
+        <img src="../img/spinning1.jpg" class="img-fluid">
       </div>
       <div class="col-md-6 col-sm">
         <h3>Montanha</h3>
@@ -35,7 +35,7 @@ Intervalado e Montanha</p>
         <p>Treino que mistura 2 características. Platôs de treino que podem auxiliar no trabalho de resistência, fato que acontece no trecho de montanha da aula, e treino intervalado, de alta intensidade que proporciona alto gasto calórico e melhoria nos níveis de condicionamento.</p>
       </div>
       <div class="col-md-6 col-sm">
-        <img src="img/spinning2.jpg" class="img-fluid">
+        <img src="../img/spinning2.jpg" class="img-fluid">
 
       </div>
     </div>
@@ -44,7 +44,7 @@ Intervalado e Montanha</p>
   <div class="container-fluid text-center conteudo">
     <div class="row">
       <div class="col-md-6 col-sm">
-        <img src="img/spinning3.jpg" class="img-fluid">
+        <img src="../img/spinning3.jpg" class="img-fluid">
       </div>
       <div class="col-md-6 col-sm">
         <h3>Fat Burn</h3>
@@ -82,6 +82,6 @@ Intervalado e Montanha</p>
 
 
 <?php
-        require_once 'footer.php';
+        require_once '../includes/footer.php';
 
     ?>
