@@ -8,6 +8,8 @@ try{
 
 if (!empty($dadoscad['btncad'])) {
 
+    //variável para caso existir algum campo vazio, mostrar mensagem para preenchimento
+    //parent.location redireciona para o formulário
     $vazio = false;
 
     $dadoscad = array_map('trim', $dadoscad);
@@ -15,7 +17,7 @@ if (!empty($dadoscad['btncad'])) {
         $vazio = true;
         echo  "<script>
             alert('Preencher todos os campos!!!');
-            parent.location = 'formaluno.php';
+            parent.location = 'formaluno.php'; 
             </script>";
    
 
