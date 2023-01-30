@@ -12,7 +12,7 @@ require_once '../includes/head.php';
 
 
 
-<form method="post" action="controlealuno.php">
+<form method="post" action="controlealuno.php" enctype="multipart/form-data">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -147,7 +147,7 @@ require_once '../includes/head.php';
                                         <div class="form-group">
                                             <label for="uf">Sua foto aqui</label>
                                             <p>
-                                                <input type="text" class="form-control" id="uf" name="foto">
+                                                <input type="file" class="form-control" id="uf" name="foto">
                                         </div>
 
                        

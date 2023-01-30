@@ -37,6 +37,7 @@ else{
 
 ?>
 
+<form method="post" action="controlealuno.php" enctype="multipart/form-data">
 <div class="container-fluid texto">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -44,7 +45,12 @@ else{
         </div>
     </div>
 </div>
-<form method="post" action="controlealuno.php">
+
+    <div class="row"> <!--colocar css depois pra editar foto -->
+        <div class="col-md-12 text-let">
+            <img src="<?php echo $FOTO; ?>" style=width:150px;height:150px;>
+</div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-1">
@@ -180,7 +186,7 @@ else{
                                         <div class="form-group">
                                             <label for="uf">Foto</label>
                                             <p>
-                                                <input type="text" class="form-control" id="uf" name="foto" value="<?php echo $FOTO;?>">
+                                                <input type="file" class="form-control" id="uf" name="foto">
                                         </div>
                                    </div>
                     <div class="col-md-6">

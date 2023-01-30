@@ -2,6 +2,7 @@
 
 <?php
 require_once '../includes/head.php';
+require_once '../includes/conexao.php';
 
 
 //session_start();
