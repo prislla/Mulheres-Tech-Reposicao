@@ -2,17 +2,14 @@
 require_once '../includes/head.php';
 ?>
 
+<form method="post" action="controlealuno.php" enctype="multipart/form-data">
 <div class="container-fluid texto">
     <div class="row">
         <div class="col-md-12 text-center">
             <h2>Preencha todos os campos abaixo para cadastro de alunos da <strong>Body Movement</strong>.</h2>
         </div>
     </div>
-</div>
 
-
-
-<form method="post" action="controlealuno.php" enctype="multipart/form-data">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
@@ -133,37 +130,38 @@ require_once '../includes/head.php';
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div>   
+                        
+                                <div class="container">
+                            <div class="row"> 
+                                             
+
                             <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="uf">Sua foto aqui</label>
+                                            <p>
+                                                <input type="file" class="form-control" id="uf" name="foto">
+                                        </div>
+                                                             
+
+                        </div>
+
+                        <div class="col-md-4">
                                         <div class="form-group">
                                         <label for="pass">Senha (Mínimo de 8 caracteres):</label>
                                         <input type="password" id="pass" name="senha"  required>
                                         <!-- colocar minlength="8" depois do name senha, obriga a colocar pelo menos 8 caracteres-->
                             </div>  
                             </div>
-
+                        
+                        <div class="container">
+                            <div class="row"> 
                             <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label for="uf">Sua foto aqui</label>
-                                            <p>
-                                                <input type="file" class="form-control" id="uf" name="foto">
-                                        </div>
-
-                       
-
-                        </div>
-                        <div class="form-group">
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
-                                <label class="form-check-label" for="gridCheck">
-                                    Tudo certo!
-                                </label>
-                            </div>
-                        </div>
                         <input type="submit" class="btn btn-primary" name="btncad" value ="Cadastrar">
-
+                </div>
 </form>
+        
+</div>
+
 
 
 

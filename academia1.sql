@@ -98,6 +98,8 @@ VALUES
 ('JOÃO PEDRO OLIVEIRA','(21)99036-7137','145.585.787-09','25.325.255-8','2020/12/14','23040-550','2355','BLOCO6 APTO 506','https://randomuser.me/api/portraits/men/7.jpg','MASCULINO','jpoliver@gmail.com','testando123','A'),
 ('JULIE QUINTANILHA','(21)99036-7137','145.875.987-09','25.625.805-6','2013/01/01','21775-430','325','CASA 2','https://randomuser.me/api/portraits/women/30.jpg','FEMININO','juliequinta@gmail.com','testando123','A');
 
+
+
 INSERT INTO FUNCIONARIO 
 (CPFFUNCIONARIO,NOME,TELEFONE,RG,CEP,NUMEROCASA,COMPLEMENTO,FOTO,SEXO,CARGO,EMAILFUNCIONARIO, SENHA)
 

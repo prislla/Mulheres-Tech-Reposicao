@@ -42,6 +42,8 @@
           <a class="dropdown-item" href="../pages/roupas.php">Roupas</a>
           <a class="dropdown-item" href="../pages/suplementos.php">Suplementos</a>
           <a class="dropdown-item" href="../pages/acessorios.php">Acessórios</a>
+          <a class="dropdown-item" href="../pages/mochilas.php">Mochilas</a>
+
 
         </div>
       </li>

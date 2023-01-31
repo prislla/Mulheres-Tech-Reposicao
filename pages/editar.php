@@ -47,8 +47,10 @@ else{
 </div>
 
     <div class="row"> <!--colocar css depois pra editar foto -->
-        <div class="col-md-12 text-let">
+        <div class="col-md-12 text-ce">
             <img src="<?php echo $FOTO; ?>" style=width:150px;height:150px;>
+            <!--<input type="text" value="<?php echo $FOTO; ?>">-->
+
 </div>
 
     <div class="container">
