@@ -7,18 +7,21 @@ include_once '../includes/conexao.php';
 $pagatual = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
 $pag = (!empty($pagatual)) ? $pagatual : 1;
 
-$limitereg = 3;
+$limitereg = 6;
 
 $inicio = ($limitereg * $pag) - $limitereg;
 
 //se quiser buscar mais dados só incluir 
-$busca = "SELECT * FROM aluno LIMIT $inicio , $limitereg";
+$busca = "SELECT p.CODIGOPRODUTO,p.NOME,p.VALOR,p.TAMANHO,p.COR,p.QUANTIDADE,p.FOTO,c.NOMECATEGORIA
+FROM PRODUTO p, CATEGORIA c 
+WHERE QUANTIDADE > 0 and c.IDCATEGORIA = p.IDCATEGORIA
+LIMIT $inicio , $limitereg";
 
 $resultado = $conn->prepare($busca); 
 $resultado->execute();
 
 if (($resultado) AND ($resultado->rowCount() != 0)){
-   // echo "<h1>Relatório de Alunos Body Movement</h1><br>";
+   // echo "<h1>Relatório de produtos Body Movement</h1><br>";
     
 
 ?>
@@ -83,17 +86,19 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 
 <hr>
 <div class="alert alert-dark" role="alert">
-<h1>Relatório de Alunos Body Movement</h1>
+<h1>Relatório de produtos da Body Movement</h1>
 </div>
         <table class="table table-hover">
             <thead>
             <tr>
             <th scope="col">Foto</th>
-            <th scope="col">Matrícula</th>
-            <th scope="col">CPF</th>
+            <th scope="col">Código do produto</th>
             <th scope="col">Nome</th>
-            <th scope="col">Telefone</th>
-            <th scope="col">Email</th>
+            <th scope="col">Cor</th>
+            <th scope="col">Valor</th>
+            <th scope="col">Tamanho</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Categoria</th>
             </tr>
             </thead>
             <tbody>
@@ -110,19 +115,21 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 
         <tr>
             <td scope="row"><img src="<?php echo $FOTO; ?>"></td>
-            <td scope="row"><?php echo $MATRICULA ?></td>
-            <td><?php echo $CPF ?></td>
-            <td><?php echo $NOME ?></td></td>
-            <td><?php echo $TELEFONE ?></td></td>
-            <td><?php echo $EMAILALUNO ?></td></td>
+            <td scope="row"><?php echo $CODIGOPRODUTO ?></td>
+            <td><?php echo $NOME ?></td>
+            <td><?php echo $COR ?></td></td>
+            <td><?php echo $VALOR ?></td></td>
+            <td><?php echo $TAMANHO ?></td></td>
+            <td><?php echo $QUANTIDADE ?></td></td>
+            <td><?php echo $NOMECATEGORIA ?></td></td>
             <td>
-                <?php echo "<a href='editar.php?matricula=$MATRICULA'>" ; ?>
+                <?php echo "<a href='editprod.php?CODIGOPRODUTO=$CODIGOPRODUTO'>" ; ?>
                 <input type="submit" class="btn btn-primary btn-sm" name="editar" value="Editar">
             </td>
-            <td>
-                <?php echo "<a href='excluir.php?matricula=$MATRICULA'>" ; ?>
+            <!--<td>
+                <?php echo "<a href='excluirprod.php?matricula=$matricula'>" ; ?> 
                 <input type="submit" class="btn btn-danger btn-sm" name="excluir" value="Excluir">
-            </td>
+            </td>-->
         </tr>
               
 
@@ -140,8 +147,8 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 }
 
 //Contar os registros no BD
-$qtregistro = "SELECT COUNT(matricula) AS registros FROM aluno";
-$resultado = $conn->prepare($qtregistro);
+$qtproduto = "SELECT COUNT(CODIGOPRODUTO) AS produtos FROM produto";
+$resultado = $conn->prepare($qtproduto);
 $resultado->execute();
 $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
 
@@ -150,12 +157,12 @@ $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
 
 
 //ceil - retorna um valor inteiro
-$qnt_pagina = ceil($resposta['registros'] / $limitereg);
+$qnt_pagina = ceil($resposta['produtos'] / $limitereg);
 
 //Máximo de links que aparecem na página
 $maximo = 2;
 
-echo "<a href='relalunos.php?page=1'>Primeira</a> ";
+echo "<a href='relprodutos.php?page=1'>Primeira</a> ";
 
 
 //variavel $pag que foi criada na linha 7 para receber página atual, ela diminui a anterior, inicia no número, se tiver 
@@ -163,7 +170,7 @@ echo "<a href='relalunos.php?page=1'>Primeira</a> ";
 //Chamar página anterior verificando a qntd de pág menos 1 e verifica se já não é a primeira pág
 for ($anterior = $pag - $maximo; $anterior <= $pag - 1; $anterior++) {
     if ($anterior >= 1) {
-        echo "<a href='relalunos.php?page=$anterior'>$anterior</a> ";
+        echo "<a href='relprodutos.php?page=$anterior'>$anterior</a> ";
     }
 }
 
@@ -173,11 +180,11 @@ echo "$pag";
 //chama próxima página, ou seja, verificando a página ativa e acrescentando mais 1
 for ($proxima = $pag + 1; $proxima <= $pag + $maximo; $proxima++) {
     if ($proxima <= $qnt_pagina) {
-        echo "<a href='relalunos.php?page=$proxima'>$proxima</a> ";
+        echo "<a href='relprodutos.php?page=$proxima'>$proxima</a> ";
     }
 }
 
-echo "<a href='relalunos.php?page=$qnt_pagina'>Última</a> ";
+echo "<a href='relprodutos.php?page=$qnt_pagina'>Última</a> ";
 
 
 
