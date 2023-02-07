@@ -30,12 +30,20 @@ if (!empty($dadoslogin['btnlogin'])) {
     //var_dump($dadoslogin);
 
      if(password_verify($dadoslogin['senha'], $resposta['senha'])){
+
       $_SESSION['nome'] = $resposta['nome'];
       $_SESSION['foto'] = $resposta['foto'];
       $_SESSION['sexo'] = $resposta ['sexo'];
       $_SESSION['datanascimento'] = $resposta['datanascimento'];
 
+      if($_SESSION["carrinho"]==true){
+         $_SESSION ["matricula"] = $resposta["matricula"];
+         header("Location:../pages/formcarrinho.php");
+      }
+      else{
+
         header("Location:../pages/adm.php");
+    }
 
      }
      else {

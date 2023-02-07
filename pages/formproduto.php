@@ -75,7 +75,7 @@ $resultado->execute();
     
                         ?>
 
-                        <option value="<?php echo $idcategoria;?>"> <?php echo $nomecategoria;?> </option>
+                        <option value="<?php echo $idcategoria;?>"> <?php echo $nomecategoria; ?> </option>
 
                         <?php
                                 }

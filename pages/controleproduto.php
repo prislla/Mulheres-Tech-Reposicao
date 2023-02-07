@@ -29,7 +29,7 @@ try{
         $extensao = strtolower(pathinfo($nomearquivo, PATHINFO_EXTENSION)); 
 
        
-    if($extensao!="jpg" && $extensao!="png"){
+    if($extensao!="jpg" && $extensao!="png" && $extensao!="avif"){
         die("Tipo não aceito");
     }
     else{

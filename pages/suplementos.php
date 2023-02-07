@@ -9,15 +9,15 @@
   $pagatual = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
   $pag = (!empty($pagatual)) ? $pagatual : 1;
 
-  $limitereg = 6;
+  $limitereg = 3;
 
   $inicio = ($limitereg * $pag) - $limitereg;
 
   $busca= "SELECT p.codigoproduto,p.nome,p.valor,p.foto
-  FROM produto p,categoria c WHERE 
-  c.idcategoria = p.idcategoria and
-  c.nomecategoria = 'suplemento' and
-  p.quantidade > 0 LIMIT $inicio , $limitereg";
+    FROM produto p,categoria c WHERE 
+    c.idcategoria = p.idcategoria and
+    c.nomecategoria = 'suplementos' and
+    p.quantidade > 0 LIMIT $inicio , $limitereg";
 
   $resultado = $conn->prepare($busca);
   $resultado->execute();  
@@ -67,7 +67,10 @@
 
 <?php
    //Contar os registros no banco
-   $qtregistro = "SELECT COUNT(codigoproduto) AS registros FROM produto";
+   $qtregistro = "SELECT COUNT(codigoproduto) AS registros FROM produto p,categoria c WHERE 
+   c.idcategoria = p.idcategoria and
+   c.nomecategoria = 'suplementos' and
+   p.quantidade > 0";
    $resultado = $conn->prepare($qtregistro);
    $resultado->execute();
    $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
@@ -79,12 +82,12 @@
     // Maximo de links      
     $maximo = 2;
 
-    echo "<a href='relprodutos.php?page=1'>Primeira</a> ";
+    echo "<a href='suplementos.php?page=1'>Primeira</a> ";
   // Chamar página anterior verificando a quantidade de páginas menos 1 e 
   // também verificando se já não é primeira página
   for ($anterior = $pag - $maximo; $anterior <= $pag - 1; $anterior++) {
       if ($anterior >= 1) {
-          echo "  <a href='relprodutos.php?page=$anterior'>$anterior</a> ";
+          echo "  <a href='suplementos.php?page=$anterior'>$anterior</a> ";
       }
   }
 
@@ -95,11 +98,11 @@
   // a ela
   for ($proxima = $pag + 1; $proxima <= $pag + $maximo; $proxima++) {
       if ($proxima <= $qnt_pagina) {
-          echo "<a href='relprodutos.php?page=$proxima'>$proxima</a> ";
+          echo "<a href='suplementos.php?page=$proxima'>$proxima</a> ";
       }
   }
 
-  echo "<a href='relprodutos.php?page=$qnt_pagina'>Última</a> ";
+  echo "<a href='suplementos.php?page=$qnt_pagina'>Última</a> ";
 
 
 

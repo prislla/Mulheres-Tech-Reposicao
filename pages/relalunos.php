@@ -137,8 +137,8 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 }
 
 //Contar os registros no BD
-$qtregistro = "SELECT COUNT(matricula) AS registros FROM aluno";
-WHERE status = 'A';
+$qtregistro = "SELECT COUNT(matricula) AS registros FROM aluno
+WHERE status = 'A'";
 $resultado = $conn->prepare($qtregistro);
 $resultado->execute();
 $resposta = $resultado->fetch(PDO::FETCH_ASSOC);

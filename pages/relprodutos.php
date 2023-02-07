@@ -17,7 +17,7 @@ $pag = (!empty($pagatual)) ? $pagatual : 1;
 $limitereg = 6;
 
 $inicio = ($limitereg * $pag) - $limitereg;
-
+ 
 //se quiser buscar mais dados só incluir 
 $busca = "SELECT p.codigoproduto,p.nome,p.valor,p.tamanho,p.cor,p.quantidade,p.foto,c.nomecategoria
 FROM produto p, categoria c 
@@ -128,10 +128,12 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
             <td><?php echo $quantidade ?></td></td>
             <td><?php echo $nomecategoria ?></td></td>
             <td>
-                <?php echo "<a href='editprod.php?codigoproduto=$codigoproduto'>" ; ?>
+
+            <!--idproduto foi definida variavel na pagina editprod-->
+                <?php echo "<a href='editprod.php?idproduto=$codigoproduto'>" ; ?>
                 <input type="submit" class="btn btn-primary btn-sm" name="editar" value="Editar">
             </td>
-            <!--<?php echo "<a href='excluirprod.php?codigoproduto=$codigoproduto'>" ; ?>
+            <!--<?php echo "<a href='excluirprod.php?idproduto=$codigoproduto'>" ; ?>
                  
                  <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">-->
         </tr>

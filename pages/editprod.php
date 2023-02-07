@@ -3,10 +3,8 @@
 require_once '../includes/head.php';
 require_once '../includes/menu.php';
 include_once '../includes/conexao.php';
-session_start(); //abrir sessão
-ob_start(); //limpar buffer
 
-
+//crio aqui e chamo no botão editar na página relprodutos
 $id = filter_input(INPUT_GET, "idproduto", FILTER_SANITIZE_NUMBER_INT);
 
 //se não existir a variável id, mostra msg de erro
@@ -123,7 +121,7 @@ else{
                             }
                         }
 
-
+ 
                         ?>
                         </select>
 
