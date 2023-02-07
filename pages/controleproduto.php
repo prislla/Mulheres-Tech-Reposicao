@@ -10,9 +10,9 @@
 
 try{
 
-    $dadoscad = filter_input_array(INPUT_POST, FILTER_DEFAULT);
+    $dadosprod = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
-    var_dump($dadoscad);
+    //var_dump($dadoscad);
 
     if(isset($_FILES['foto'])){
         $arquivo = ($_FILES['foto']);
@@ -46,15 +46,16 @@ try{
 }
 
 
-if (!empty($dadoscad['btncad'])) {
+if (!empty($dadosprod['btncad'])) {
 
    
     $vazio = false;
 
-    $dadoscad = array_map('trim', $dadoscad);
+    $dadosprod = array_map('trim', $dadosprod);
 
-    if (in_array("", $dadoscad)) {
+    if (in_array("", $dadosprod)) {
         $vazio = true;
+
         echo  "<script>
             alert('Preencher todos os campos!!!');
             parent.location = 'formproduto.php'; 
@@ -73,16 +74,17 @@ if (!$vazio) {
 
 
 $salvar= $conn->prepare($sql);
-$salvar->bindParam(':nome', $dadoscad['nome'],PDO::PARAM_STR);
-$salvar->bindParam(':cor', $dadoscad['cor'],PDO::PARAM_STR);
-$salvar->bindParam(':valor', $dadoscad['valor'],PDO::PARAM_STR);
-$salvar->bindParam(':tamanho', $dadoscad['tamanho'],PDO::PARAM_STR);
-$salvar->bindParam(':quantidade', $dadoscad['quantidade'],PDO::PARAM_INT);
-$salvar->bindParam(':idcategoria', $dadoscad['categoria'],PDO::PARAM_STR);
-$salvar->bindParam(':foto', $path,PDO::PARAM_STR);
+$salvar->bindParam(':nome', $dadosprod['nome'], PDO::PARAM_STR);
+$salvar->bindParam(':cor', $dadosprod['cor'], PDO::PARAM_STR);
+$salvar->bindParam(':valor', $dadosprod['valor'], PDO::PARAM_STR);
+$salvar->bindParam(':tamanho', $dadosprod['tamanho'], PDO::PARAM_STR);
+$salvar->bindParam(':quantidade', $dadosprod['quantidade'], PDO::PARAM_STR);
+$salvar->bindParam(':idcategoria', $dadosprod['categoria'], PDO::PARAM_STR);
+$salvar->bindParam(':foto', $path, PDO::PARAM_STR);
 $salvar->execute();
 
 if ($salvar->rowCount()) {
+
     echo  "<script>
             alert('Produto cadastrado com sucesso!!!');
             parent.location = 'formproduto.php';
@@ -100,53 +102,42 @@ if ($salvar->rowCount()) {
 
 }
 
-/*
-if (!empty($dadoscad['btneditar'])) {
 
-    $dadoscad = array_map('trim', $dadoscad);
+if (!empty($dadosprod['btneditar'])) {
+
+    var_dump($dadosprod);
+
+    $dadosprod = array_map('trim', $dadosprod);
     
-    var_dump($dadoscad);
 
-    if(!filter_var($dadoscad['email'], FILTER_VALIDATE_EMAIL)) {
-        $vazio = true;
-
-        echo  "<script>
-            alert('Informe um e-mail válido!!!');
-            parent.location = 'formaluno.php';
-            </script>";
-    }
-
-    $sql = "UPDATE aluno set NOME=:nome,TELEFONE=:telefone,CPF=:cpf,RG=:rg,DATANASCIMENTO=:datanascimento,CEP=:cep,NUMEROCASA=:numerocasa,
-    COMPLEMENTO=:complemento,FOTO=:foto,SEXO=:sexo,EMAILALUNO=:emailaluno WHERE MATRICULA=:matricula";
+    $sql = "UPDATE produto set nome=:nome,cor=:cor,valor=:valor,tamanho=:tamanho,quantidade=:quantidade,idcategoria=:idcategoria,foto=:foto
+     WHERE codigoproduto=:codigoproduto";
 
 
 
-    $salvar= $conn->prepare($sql);
-    $salvar->bindParam(':nome', $dadoscad['nome'],PDO::PARAM_STR);
-    $salvar->bindParam(':telefone', $dadoscad['telefone'],PDO::PARAM_STR);
-    $salvar->bindParam(':cpf', $dadoscad['CPF'],PDO::PARAM_STR);
-    $salvar->bindParam(':rg', $dadoscad['RG'],PDO::PARAM_STR);
-    $salvar->bindParam(':datanascimento', $dadoscad['dn'],PDO::PARAM_STR);
-    $salvar->bindParam(':cep', $dadoscad['CEP'],PDO::PARAM_STR);
-    $salvar->bindParam(':numerocasa', $dadoscad['numero'],PDO::PARAM_INT);
-    $salvar->bindParam(':complemento', $dadoscad['complemento'],PDO::PARAM_STR);
-    $salvar->bindParam(':foto', $path , PDO::PARAM_STR);
-    $salvar->bindParam(':sexo', $dadoscad['sexo'],PDO::PARAM_STR);
-    $salvar->bindParam(':emailaluno', $dadoscad['email'],PDO::PARAM_STR);
-    $salvar->bindParam(':matricula', $dadoscad['matricula'],PDO::PARAM_INT);
-    $salvar->execute();
+$salvar= $conn->prepare($sql);
+$salvar->bindParam(':nome', $dadosprod['nome'], PDO::PARAM_STR);
+$salvar->bindParam(':cor', $dadosprod['cor'], PDO::PARAM_STR);
+$salvar->bindParam(':valor', $dadosprod['valor'], PDO::PARAM_STR);
+$salvar->bindParam(':tamanho', $dadosprod['tamanho'], PDO::PARAM_STR);
+$salvar->bindParam(':quantidade', $dadosprod['quantidade'], PDO::PARAM_STR);
+$salvar->bindParam(':idcategoria', $dadosprod['categoria'], PDO::PARAM_STR);    
+$salvar->bindParam(':foto', $path, PDO::PARAM_STR);
+$salvar->bindParam(':codigoproduto', $dadosprod['codigo'], PDO::PARAM_INT);
+$salvar->execute();
 
     if ($salvar->rowCount()) {
+
         echo  "<script>
-                alert('Dados atualizados com sucesso!!!');
-                parent.location = 'relalunos.php';
+                alert('Produto atualizado com sucesso!!!');
+                parent.location = 'relprodutos.php';
                 </script>";
 
         unset($dadoscad);
     } else {
         echo  "<script>
-                alert('Aluno não cadastrado!!!');
-                parent.location = 'relalunos.php';
+                alert('Produto não cadastrado!!!');
+                parent.location = 'relprodutos.php';
                 </script>";
     }
 
@@ -154,16 +145,12 @@ if (!empty($dadoscad['btneditar'])) {
 
 
 
-}*/
+}
 
 }
 catch(PDOException $erro){
     echo $erro;
 
 }
-
-
-
-
 
 ?>

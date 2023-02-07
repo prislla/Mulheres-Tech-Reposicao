@@ -37,7 +37,7 @@ else{
 
 ?>
 
-<form method="post" action="controlealuno.php" enctype="multipart/form-data">
+<form method="POST" action="controlealuno.php" enctype="multipart/form-data">
 <div class="container-fluid texto">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -48,31 +48,29 @@ else{
 
     <div class="row"> <!--colocar css depois pra editar foto -->
         <div class="col-md-12 text-ce">
-            <img src="<?php echo $FOTO; ?>" style=width:150px;height:150px;>
-            <!--<input type="text" value="<?php echo $FOTO; ?>">-->
-
-</div>
+            <img src="<?php echo $foto; ?>" style=width:150px;height:150px;>
+    </div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-1">
                 <div class="form=group">
                     <label for="Name">Matrícula</label>
-                    <input type="text" class="form-control" id="nome" name="matricula" placeholder="Matrícula" value="<?php echo $MATRICULA;?>">
+                    <input type="text" class="form-control" id="nome" name="matricula" placeholder="Matrícula" value="<?php echo $matricula;?>">
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form=group">
                     <label for="Name">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" value="<?php echo $NOME;?>">
+                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Seu nome" value="<?php echo $nome;?>">
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="form=group">
                     <label for="inputEmail">E-mail</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" value="<?php echo $EMAILALUNO;?>">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Seu e-mail" value="<?php echo $emailaluno;?>">
                 </div>
             </div>
 
@@ -92,22 +90,22 @@ else{
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="CPF" onkeypress="$(this).mask('000.000.000-00');"
-                                placeholder="000.000.000-00" value="<?php echo $CPF;?>">
+                            <input type="text" class="form-control" id="cpf" name="cpf" onkeypress="$(this).mask('000.000.000-00');"
+                                placeholder="000.000.000-00" value="<?php echo $cpf;?>">
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="formGroupExampleInput2">RG</label>
-                            <input type="text" class="form-control" id="rg" name="RG" placeholder="RG" value="<?php echo $RG;?>">
+                            <input type="text" class="form-control" id="rg" name="rg" placeholder="RG" value="<?php echo $rg;?>">
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="formGroupExampleInput2">Data de Nascimento</label>
-                            <input type="date" class="form-control" id="datadenascimento" name="dn" value="<?php echo $DATANASCIMENTO;?>">
+                            <input type="date" class="form-control" id="datadenascimento" name="dn" value="<?php echo $datanascimento;?>">
                         </div>
                     </div>
 
@@ -115,7 +113,7 @@ else{
                         <div class="form-group">
                             <label for="telefone">Telefone</label>
                             <input type="text" class="form-control" id="telefone" name="telefone" onkeypress="$(this).mask('(00)00000-0000')"
-                                placeholder="(00) 00000-0000" value="<?php echo $TELEFONE;?>">
+                                placeholder="(00) 00000-0000" value="<?php echo $telefone;?>">
                         </div>
                     </div>
 
@@ -125,8 +123,8 @@ else{
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="cep">CEP</label>
-                                    <input type="text" class="form-control" id="cep" name="CEP"
-                                        onblur="pesquisacep(this.value);" placeholder="00.000-000" value="<?php echo $CEP;?>">
+                                    <input type="text" class="form-control" id="cep" name="cep"
+                                        onblur="pesquisacep(this.value);" placeholder="00.000-000" value="<?php echo $cep;?>">
                                 </div>
                             </div>
 
@@ -141,7 +139,7 @@ else{
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="numero">Número</label>
-                                    <input type="text" class="form-control" name="numero" value="<?php echo $NUMEROCASA;?>">
+                                    <input type="text" class="form-control" name="numero" value="<?php echo $numerocasa;?>">
                                 </div>
                             </div>
 
@@ -149,7 +147,7 @@ else{
                                 <div class="form-group">
                                     <label for="inputAddress2">Complemento</label>
                                     <input type="text" class="form-control" id="inputAddress2" name="complemento"
-                                        placeholder="Apto, casa, etc." value="<?php echo $COMPLEMENTO;?>">
+                                        placeholder="Apto, casa, etc." value="<?php echo $complemento;?>">
                                 </div>
                             </div>
 
@@ -201,54 +199,7 @@ else{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<hr>
-
 <?php
       require_once '../includes/foot/footer.php';
     ?>
 
-
-
-
-<!--<h1> VAMOS EDITAR </H1>
-
-<td>
-                <?php echo "<a href='relalunos.php'>" ; ?>
-                <input type="submit" class="btn btn-dark" name="voltar" value="Voltar">
-            </td> -->

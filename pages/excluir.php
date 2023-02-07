@@ -27,18 +27,16 @@ $resultado->execute();
 if(($resultado) AND ($resultado->rowCount()!= 0)){
 
     echo  "<script>
-    alert('Aluno excluido com sucesso!!');
+    alert('Aluno excluído com sucesso!!');
     parent.location = 'relalunos.php';
     </script>";
 
 }else{
 
     echo  "<script>
-    alert('Erro: Tente novamente!!');
+    alert('Erro: Exclusão não realizada, tente novamente!!');
     parent.location = 'relalunos.php';
     </script>";
 }
-
-
 
 ?>

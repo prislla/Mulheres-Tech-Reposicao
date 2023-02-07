@@ -3,7 +3,6 @@ require_once '../includes/head.php';
 require_once '../includes/conexao.php';
 
 $sql = "SELECT * FROM categoria";
-
 $resultado=$conn->prepare($sql);
 $resultado->execute();
 
@@ -11,7 +10,7 @@ $resultado->execute();
 ?>
 
 
-<form method="post" action= "controleproduto.php" enctype="multipart/form-data">
+<form method="POST" action= "controleproduto.php" enctype="multipart/form-data">
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -76,7 +75,7 @@ $resultado->execute();
     
                         ?>
 
-                        <option value="<?php echo $IDCATEGORIA;?>"> <?php echo $NOMECATEGORIA;?> </option>
+                        <option value="<?php echo $idcategoria;?>"> <?php echo $nomecategoria;?> </option>
 
                         <?php
                                 }
@@ -96,7 +95,7 @@ $resultado->execute();
                             
             <div class="form-group">
                             
-                        <input type="submit" class="btn btn-primary" name="btncad" value ="Cadastrar">
+                        <input type="submit" class="btn btn-primary" name="btncad" value ="Enviar">
 
 </form>
 </div>
@@ -106,18 +105,6 @@ $resultado->execute();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-<hr>
 <?php
       require_once '../includes/foot/footer.php';
     ?>

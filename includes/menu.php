@@ -1,3 +1,15 @@
+<?php
+    
+    session_start();
+    ob_start();
+
+    if(!isset($_SESSION["quant"])){
+      $_SESSION["quant"] = 0;
+    }
+
+?>
+
+
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -50,9 +62,18 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <a href="../pages/login.php"> <button type="button" class="btn btn-dark">Área do Aluno</button></a>
+    
+      <a href="formcarrinho.php">
+            <img src="../img/carrinho.png" style=width:50px;height:50px;></a>
+            <?php 
+              if($_SESSION["quant"]>0){
+                 echo $_SESSION["quant"]; 
+              }
+            ?>
+         
+
+    
     </form>
-
-
   </div>
 </nav>
 </body>

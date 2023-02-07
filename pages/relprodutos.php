@@ -3,6 +3,13 @@
 require_once '../includes/head.php';
 include_once '../includes/conexao.php';
 
+
+
+if(isset($_SESSION['msg'])){
+  echo $_SESSION['msg'];
+  unset($_SESSION['msg']);
+} 
+
 //definir quantos registros por vez queremos exibir por página
 $pagatual = filter_input(INPUT_GET, "page", FILTER_SANITIZE_NUMBER_INT);
 $pag = (!empty($pagatual)) ? $pagatual : 1;
@@ -12,9 +19,9 @@ $limitereg = 6;
 $inicio = ($limitereg * $pag) - $limitereg;
 
 //se quiser buscar mais dados só incluir 
-$busca = "SELECT p.CODIGOPRODUTO,p.NOME,p.VALOR,p.TAMANHO,p.COR,p.QUANTIDADE,p.FOTO,c.NOMECATEGORIA
-FROM PRODUTO p, CATEGORIA c 
-WHERE QUANTIDADE > 0 and c.IDCATEGORIA = p.IDCATEGORIA
+$busca = "SELECT p.codigoproduto,p.nome,p.valor,p.tamanho,p.cor,p.quantidade,p.foto,c.nomecategoria
+FROM produto p, categoria c 
+WHERE quantidade > 0 and c.idcategoria = p.idcategoria
 LIMIT $inicio , $limitereg";
 
 $resultado = $conn->prepare($busca); 
@@ -91,11 +98,10 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
         <table class="table table-hover">
             <thead>
             <tr>
-            <th scope="col">Foto</th>
-            <th scope="col">Código do produto</th>
+            <th scope="col">Imagem</th>
             <th scope="col">Nome</th>
             <th scope="col">Cor</th>
-            <th scope="col">Valor</th>
+            <th scope="col">Preço</th>
             <th scope="col">Tamanho</th>
             <th scope="col">Quantidade</th>
             <th scope="col">Categoria</th>
@@ -114,22 +120,20 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 ?>
 
         <tr>
-            <td scope="row"><img src="<?php echo $FOTO; ?>"></td>
-            <td scope="row"><?php echo $CODIGOPRODUTO ?></td>
-            <td><?php echo $NOME ?></td>
-            <td><?php echo $COR ?></td></td>
-            <td><?php echo $VALOR ?></td></td>
-            <td><?php echo $TAMANHO ?></td></td>
-            <td><?php echo $QUANTIDADE ?></td></td>
-            <td><?php echo $NOMECATEGORIA ?></td></td>
+            <td scope="row"><img src="<?php echo $foto; ?>"style=widht:100px;height:100px;></td>
+            <td><?php echo $nome ?></td>
+            <td><?php echo $cor ?></td></td>
+            <td><?php echo $valor ?></td></td>
+            <td><?php echo $tamanho ?></td></td>
+            <td><?php echo $quantidade ?></td></td>
+            <td><?php echo $nomecategoria ?></td></td>
             <td>
-                <?php echo "<a href='editprod.php?CODIGOPRODUTO=$CODIGOPRODUTO'>" ; ?>
+                <?php echo "<a href='editprod.php?codigoproduto=$codigoproduto'>" ; ?>
                 <input type="submit" class="btn btn-primary btn-sm" name="editar" value="Editar">
             </td>
-            <!--<td>
-                <?php echo "<a href='excluirprod.php?matricula=$matricula'>" ; ?> 
-                <input type="submit" class="btn btn-danger btn-sm" name="excluir" value="Excluir">
-            </td>-->
+            <!--<?php echo "<a href='excluirprod.php?codigoproduto=$codigoproduto'>" ; ?>
+                 
+                 <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">-->
         </tr>
               
 
@@ -147,8 +151,8 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 }
 
 //Contar os registros no BD
-$qtproduto = "SELECT COUNT(CODIGOPRODUTO) AS produtos FROM produto";
-$resultado = $conn->prepare($qtproduto);
+$qtregistro = "SELECT COUNT(codigoproduto) AS registros FROM produto";
+$resultado = $conn->prepare($qtregistro);
 $resultado->execute();
 $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
 
@@ -157,7 +161,7 @@ $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
 
 
 //ceil - retorna um valor inteiro
-$qnt_pagina = ceil($resposta['produtos'] / $limitereg);
+$qnt_pagina = ceil($resposta['registros'] / $limitereg);
 
 //Máximo de links que aparecem na página
 $maximo = 2;

@@ -12,7 +12,7 @@ $limitereg = 3;
 $inicio = ($limitereg * $pag) - $limitereg;
 
 //se quiser buscar mais dados só incluir 
-$busca = "SELECT * FROM aluno LIMIT $inicio , $limitereg";
+$busca = "SELECT * FROM aluno WHERE status = 'A' LIMIT $inicio , $limitereg";
 
 $resultado = $conn->prepare($busca); 
 $resultado->execute();
@@ -20,7 +20,6 @@ $resultado->execute();
 if (($resultado) AND ($resultado->rowCount() != 0)){
    // echo "<h1>Relatório de Alunos Body Movement</h1><br>";
     
-
 ?>
 
 <body>
@@ -90,7 +89,7 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
             <tr>
             <th scope="col">Foto</th>
             <th scope="col">Matrícula</th>
-            <th scope="col">CPF</th>
+            <th scope="col">Cpf</th>
             <th scope="col">Nome</th>
             <th scope="col">Telefone</th>
             <th scope="col">Email</th>
@@ -98,9 +97,7 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
             </thead>
             <tbody>
 
-
 <?php
-
         while ($linha = $resultado->fetch(PDO::FETCH_ASSOC)){
         //var_dump($linha);
 
@@ -109,18 +106,18 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 ?>
 
         <tr>
-            <td scope="row"><img src="<?php echo $FOTO; ?>"></td>
-            <td scope="row"><?php echo $MATRICULA ?></td>
-            <td><?php echo $CPF ?></td>
-            <td><?php echo $NOME ?></td></td>
-            <td><?php echo $TELEFONE ?></td></td>
-            <td><?php echo $EMAILALUNO ?></td></td>
+            <td scope="row"><img src="<?php echo $foto; ?>"></td>
+            <td scope="row"><?php echo $matricula ?></td>
+            <td><?php echo $cpf ?></td>
+            <td><?php echo $nome ?></td></td>
+            <td><?php echo $telefone ?></td></td>
+            <td><?php echo $emailaluno ?></td></td>
             <td>
-                <?php echo "<a href='editar.php?matricula=$MATRICULA'>" ; ?>
+                <?php echo "<a href='editar.php?matricula=$matricula'>" ; ?>
                 <input type="submit" class="btn btn-primary btn-sm" name="editar" value="Editar">
             </td>
             <td>
-                <?php echo "<a href='excluir.php?matricula=$MATRICULA'>" ; ?>
+                <?php echo "<a href='excluir.php?matricula=$matricula'>" ; ?>
                 <input type="submit" class="btn btn-danger btn-sm" name="excluir" value="Excluir">
             </td>
         </tr>
@@ -141,6 +138,7 @@ if (($resultado) AND ($resultado->rowCount() != 0)){
 
 //Contar os registros no BD
 $qtregistro = "SELECT COUNT(matricula) AS registros FROM aluno";
+WHERE status = 'A';
 $resultado = $conn->prepare($qtregistro);
 $resultado->execute();
 $resposta = $resultado->fetch(PDO::FETCH_ASSOC);
@@ -163,7 +161,7 @@ echo "<a href='relalunos.php?page=1'>Primeira</a> ";
 //Chamar página anterior verificando a qntd de pág menos 1 e verifica se já não é a primeira pág
 for ($anterior = $pag - $maximo; $anterior <= $pag - 1; $anterior++) {
     if ($anterior >= 1) {
-        echo "<a href='relalunos.php?page=$anterior'>$anterior</a> ";
+        echo "  <a href='relalunos.php?page=$anterior'>$anterior</a> ";
     }
 }
 

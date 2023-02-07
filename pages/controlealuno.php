@@ -70,6 +70,7 @@ if (!empty($dadoscad['btncad'])) {
     $dadoscad = array_map('trim', $dadoscad);
     if (in_array("", $dadoscad)) {
         $vazio = true;
+
         echo  "<script>
             alert('Preencher todos os campos!!!');
             parent.location = 'formaluno.php'; 
@@ -78,6 +79,7 @@ if (!empty($dadoscad['btncad'])) {
 
     } else if(!filter_var($dadoscad['email'], FILTER_VALIDATE_EMAIL)) {
         $vazio = true;
+
         echo  "<script>
             alert('Informe um e-mail válido!!!');
             parent.location = 'formaluno.php';
@@ -88,7 +90,7 @@ if (!empty($dadoscad['btncad'])) {
 
     $senha = password_hash($dadoscad['senha'], PASSWORD_DEFAULT);    
 
-    $sql = "INSERT INTO aluno(nome,telefone,CPF,RG,datanascimento,CEP,numerocasa,complemento,foto,sexo,emailaluno,senha) 
+    $sql = "INSERT INTO aluno(nome,telefone,cpf,rg,datanascimento,cep,numerocasa,complemento,foto,sexo,emailaluno,senha) 
     values(:nome,:telefone,:cpf,:rg,:datanascimento,:cep,:numerocasa,:complemento,:foto,:sexo,:emailaluno,:senha)";
 
 
@@ -96,10 +98,10 @@ if (!empty($dadoscad['btncad'])) {
 $salvar= $conn->prepare($sql);
 $salvar->bindParam(':nome', $dadoscad['nome'],PDO::PARAM_STR);
 $salvar->bindParam(':telefone', $dadoscad['telefone'],PDO::PARAM_STR);
-$salvar->bindParam(':cpf', $dadoscad['CPF'],PDO::PARAM_STR);
-$salvar->bindParam(':rg', $dadoscad['RG'],PDO::PARAM_STR);
+$salvar->bindParam(':cpf', $dadoscad['cpf'],PDO::PARAM_STR);
+$salvar->bindParam(':rg', $dadoscad['rg'],PDO::PARAM_STR);
 $salvar->bindParam(':datanascimento', $dadoscad['dn'],PDO::PARAM_STR);
-$salvar->bindParam(':cep', $dadoscad['CEP'],PDO::PARAM_STR);
+$salvar->bindParam(':cep', $dadoscad['cep'],PDO::PARAM_STR);
 $salvar->bindParam(':numerocasa', $dadoscad['numero'],PDO::PARAM_INT);
 $salvar->bindParam(':complemento', $dadoscad['complemento'],PDO::PARAM_STR);
 $salvar->bindParam(':foto', $path , PDO::PARAM_STR);
@@ -109,6 +111,7 @@ $salvar->bindParam(':senha', $senha,PDO::PARAM_STR);
 $salvar->execute();
 
 if ($salvar->rowCount()) {
+
     echo  "<script>
             alert('Usuário cadastrado com sucesso!!!');
             parent.location = 'formaluno.php';
@@ -116,6 +119,7 @@ if ($salvar->rowCount()) {
 
     unset($dadoscad);
 } else {
+
     echo  "<script>
             alert('Usuário não cadastrado!!!');
             parent.location = 'formaluno.php';
@@ -131,7 +135,7 @@ if (!empty($dadoscad['btneditar'])) {
 
     $dadoscad = array_map('trim', $dadoscad);
     
-    var_dump($dadoscad);
+    //var_dump($dadoscad);
 
     if(!filter_var($dadoscad['email'], FILTER_VALIDATE_EMAIL)) {
         $vazio = true;
@@ -142,18 +146,18 @@ if (!empty($dadoscad['btneditar'])) {
             </script>";
     }
 
-    $sql = "UPDATE aluno set NOME=:nome,TELEFONE=:telefone,CPF=:cpf,RG=:rg,DATANASCIMENTO=:datanascimento,CEP=:cep,NUMEROCASA=:numerocasa,
-    COMPLEMENTO=:complemento,FOTO=:foto,SEXO=:sexo,EMAILALUNO=:emailaluno WHERE MATRICULA=:matricula";
+    $sql = "UPDATE aluno set nome=:nome,telefone=:telefone,cpf=:cpf,rg=:rg,datanascimento=:datanascimento,cep=:cep,numerocasa=:numerocasa,
+    complemento=:complemento,foto=:foto,sexo=:sexo,emailaluno=:emailaluno WHERE matricula=:matricula";
 
 
 
     $salvar= $conn->prepare($sql);
     $salvar->bindParam(':nome', $dadoscad['nome'],PDO::PARAM_STR);
     $salvar->bindParam(':telefone', $dadoscad['telefone'],PDO::PARAM_STR);
-    $salvar->bindParam(':cpf', $dadoscad['CPF'],PDO::PARAM_STR);
-    $salvar->bindParam(':rg', $dadoscad['RG'],PDO::PARAM_STR);
+    $salvar->bindParam(':cpf', $dadoscad['cpf'],PDO::PARAM_STR);
+    $salvar->bindParam(':rg', $dadoscad['rg'],PDO::PARAM_STR);
     $salvar->bindParam(':datanascimento', $dadoscad['dn'],PDO::PARAM_STR);
-    $salvar->bindParam(':cep', $dadoscad['CEP'],PDO::PARAM_STR);
+    $salvar->bindParam(':cep', $dadoscad['cep'],PDO::PARAM_STR);
     $salvar->bindParam(':numerocasa', $dadoscad['numero'],PDO::PARAM_INT);
     $salvar->bindParam(':complemento', $dadoscad['complemento'],PDO::PARAM_STR);
     $salvar->bindParam(':foto', $path , PDO::PARAM_STR);
@@ -163,6 +167,7 @@ if (!empty($dadoscad['btneditar'])) {
     $salvar->execute();
 
     if ($salvar->rowCount()) {
+
         echo  "<script>
                 alert('Dados atualizados com sucesso!!!');
                 parent.location = 'relalunos.php';
@@ -186,9 +191,5 @@ catch(PDOException $erro){
     echo $erro;
 
 }
-
-
-
-
 
 ?>

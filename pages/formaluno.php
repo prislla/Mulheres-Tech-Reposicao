@@ -2,7 +2,7 @@
 require_once '../includes/head.php';
 ?>
 
-<form method="post" action="controlealuno.php" enctype="multipart/form-data">
+<form method="POST" action="controlealuno.php" enctype="multipart/form-data">
 <div class="container-fluid texto">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -42,7 +42,7 @@ require_once '../includes/head.php';
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="CPF" onkeypress="$(this).mask('000.000.000-00');"
+                            <input type="text" class="form-control" id="cpf" name="cpf" onkeypress="$(this).mask('000.000.000-00');"
                                 placeholder="000.000.000-00">
                         </div>
                     </div>
@@ -50,7 +50,7 @@ require_once '../includes/head.php';
                     <div class="col-md-3">
                         <div class="form-group">
                             <label for="formGroupExampleInput2">RG</label>
-                            <input type="text" class="form-control" id="rg" name="RG" placeholder="RG">
+                            <input type="text" class="form-control" id="rg" name="rg" placeholder="RG">
                         </div>
                     </div>
 
@@ -75,7 +75,7 @@ require_once '../includes/head.php';
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <label for="cep">CEP</label>
-                                    <input type="text" class="form-control" id="cep" name="CEP"
+                                    <input type="text" class="form-control" id="cep" name="cep"
                                         onblur="pesquisacep(this.value);" placeholder="00.000-000">
                                 </div>
                             </div>
@@ -137,13 +137,10 @@ require_once '../includes/head.php';
 
                             <div class="col-md-6">
                                         <div class="form-group">
-                                            <label for="uf">Sua foto aqui</label>
-                                            <p>
-                                                <input type="file" class="form-control" id="uf" name="foto">
+                                            <label for="foto">Sua foto aqui</label>
+                                            <input type="file" class="form-control"  name="foto">
                                         </div>
-                                                             
-
-                        </div>
+                                    </div>
 
                         <div class="col-md-4">
                                         <div class="form-group">
@@ -156,7 +153,7 @@ require_once '../includes/head.php';
                         <div class="container">
                             <div class="row"> 
                             <div class="col-md-4">
-                        <input type="submit" class="btn btn-primary" name="btncad" value ="Cadastrar">
+                        <input type="submit" class="btn btn-primary" name="btncad" value ="Enviar">
                 </div>
 </form>
         
@@ -165,7 +162,7 @@ require_once '../includes/head.php';
 
 
 
-<hr>
+
 <?php
       require_once '../includes/foot/footer.php';
     ?>

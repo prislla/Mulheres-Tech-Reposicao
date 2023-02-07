@@ -1,12 +1,15 @@
 <?php
-require_once '../includes/head.php';
-require_once '../includes/menu.php';
-include_once '../includes/conexao.php';
+        require_once '../includes/head.php';
+        require_once '../includes/menu.php';
+        include_once '../includes/conexao.php';
 
-session_start();
-ob_start();
+        //session_start();
+        ob_start();
+?>
 
-echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
+<?php
+
+//echo "senha".password_hash('testando123', PASSWORD_DEFAULT);
 
 $dadoslogin = filter_input_array(INPUT_POST, FILTER_DEFAULT);
 
@@ -14,11 +17,11 @@ if (!empty($dadoslogin['btnlogin'])) {
 
  $buscalogin = "SELECT matricula, nome, emailaluno, senha, foto, sexo, datanascimento
                         FROM aluno
-                        WHERE emailaluno =:usuario
+                        WHERE emailaluno =:usuario and status ='A' 
                         LIMIT 1";
            
  $resultado = $conn->prepare($buscalogin); 
- $resultado->bindParam(':usuario', $dadoslogin['usuario'],PDO::PARAM_STR);
+ $resultado->bindParam(':usuario', $dadoslogin['usuario'], PDO::PARAM_STR);
  $resultado->execute();
 
  if (($resultado) AND ($resultado->rowCount() != 0)){
