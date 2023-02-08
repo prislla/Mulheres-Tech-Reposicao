@@ -27,7 +27,7 @@
 
 
 
-    <div class="container-fluid">
+    <div class="container-fluid imagens">
         <div class="row">
             <div class="col-md-12 text-center">
                <h1>Moda Fitness Body Movement</h1>

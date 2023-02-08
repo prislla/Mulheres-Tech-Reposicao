@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 07-Fev-2023 às 21:06
+-- Tempo de geração: 08-Fev-2023 às 20:57
 -- Versão do servidor: 10.4.24-MariaDB
 -- versão do PHP: 8.1.6
 
@@ -51,8 +51,8 @@ CREATE TABLE `aluno` (
 --
 
 INSERT INTO `aluno` (`matricula`, `nome`, `telefone`, `cpf`, `rg`, `datanascimento`, `cep`, `numerocasa`, `complemento`, `foto`, `sexo`, `emailaluno`, `senha`, `status`) VALUES
-(1, 'João Pedro Oliveira', '(21)99036-7137', '145.585.787-09', '25.325.255-8', '2020-12-14', '23040-550', 2355, 'bl 6 apto 506', '../fotos/63d96ac513eff.jpg', 'F', 'jpoliver@gmail.com', 'testando123', 'A'),
-(2, 'Julie Quintanilha', '(21)99036-7137', '145.875.987-09', '25.625.805-6', '2013-01-01', '21775-430', 325, 'Casa 2', 'https://randomuser.me/api/portraits/women/30.jpg', 'F', 'juliequinta@gmail.com', 'testando123', 'A'),
+(1, 'João Pedro Oliveira', '(21)99036-7137', '145.585.787-09', '25.325.255-8', '2020-12-14', '23040-550', 2355, 'bl 6 apto 506', '../fotos/63d96ac513eff.jpg', 'F', 'jpoliver@gmail.com', '$2y$10$vNqUt0jwYEVBTBxLvwHWT.r3xXRMH/zK6v5eNkQce0bzB2kE3ZnOS', 'A'),
+(2, 'Julie Quintanilha', '(21)99036-7137', '145.875.987-09', '25.625.805-6', '2013-01-01', '21775-430', 325, 'Casa 2', 'https://randomuser.me/api/portraits/women/30.jpg', 'F', 'juliequinta@gmail.com', '$2y$10$vNqUt0jwYEVBTBxLvwHWT.r3xXRMH/zK6v5eNkQce0bzB2kE3ZnOS', 'A'),
 (3, 'Romeu Andrade', '(21)98569-5659', '154.897.698-00', '4659', '1990-05-10', '23040550', 1, 'Não tem', '../fotos/63d9479681e50.jpg', 'M', 'romeoandra@yahoo.com.br', '$2y$10$vNqUt0jwYEVBTBxLvwHWT.r3xXRMH/zK6v5eNkQce0bzB2kE3ZnOS', 'A'),
 (4, 'Cora Lima', '(21)98565-9466', '125.697.951-60', '169549', '2005-05-05', '21775430', 5, 'Casa 3', '../fotos/63d947e5e0c14.jpg', 'F', 'coral@gmail.com', '$2y$10$tpnTBWmC5RV.4xxqwD48.OKTQY.pRITdQ.8c.xEOfhk8VdQQTLmRO', 'A'),
 (5, 'Carla Melo', '(21)98565-9466', '125.697.951-60', '169549', '2005-05-05', '21775430', 5, 'Casa 3', '../fotos/63d947e5e0c14.jpg', 'F', 'melocarla@gmail.com', '$2y$10$tpnTBWmC5RV.4xxqwD48.OKTQY.pRITdQ.8c.xEOfhk8VdQQTLmRO', 'A'),
@@ -141,17 +141,6 @@ CREATE TABLE `carrinho` (
   `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Extraindo dados da tabela `carrinho`
---
-
-INSERT INTO `carrinho` (`codigoproduto`, `nome`, `valor`, `quantcompra`, `foto`) VALUES
-(4, 'Whey', 70, 2, '../produtos/63e28b9591bb2.jpg'),
-(4, 'Whey', 70, 2, '../produtos/63e28b9591bb2.jpg'),
-(1, 'Conjunto Impact', 270, 3, ''),
-(13, 'Calcio D', 70, 2, '../produtos/63e29b673213d.jpg'),
-(9, 'Suplemento Vitamínico', 25, 2, '../produtos/63e28e939e5a8.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -203,13 +192,13 @@ INSERT INTO `funcionario` (`cpffuncionario`, `nome`, `telefone`, `rg`, `cep`, `n
 ('005.522.985-44', 'André Castro Alves', '(21)97484-8566', '27.327.205-1', '21775-430', 55, 'Casa 9', 'https://randomuser.me/api/portraits/men/46.jpg', 'M', 'Professor', 'andrecalves@bodymovement.com', 'testando123', 'A'),
 ('154.587.927-44', 'Carlos José Rodrigues', '(21)98545-7899', '27.852.789-2', '21775-430', 25, 'Casa 3', 'https://randomuser.me/api/portraits/men/52.jpg', 'M', 'Professor', 'cjr@bodymovement.com', 'testando123', 'A'),
 ('171.875.952-55', 'Joana Souza', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/women/26.jpg', 'F', 'Recepcionista', 'josouza@bodymovement.com', 'testando123', 'A'),
-('171.875.952-55', 'Luan Augusto', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/26.jpg', 'M', 'Professor', 'luaagu@bodymovement.com', 'testando123', 'A'),
-('171.875.952-55', 'Asaph Santana', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/32.jpg', 'M', 'Professor', 'asaph@bodymovement.com', 'testando123', 'A'),
-('171.875.952-55', 'Ingrid Gomes', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/women/52.jpg', 'F', 'Recepcionista', 'ingrid@bodymovement.com', 'testando123', 'A'),
-('171.875.952-55', 'Matheus da Silva', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/25.jpg', 'M', 'Professor', 'theus@bodymovement.com', 'testando123', 'A'),
-('171.875.952-55', 'Raquel dos Santos', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/women/26.jpg', 'F', 'Recepcionista', 'raquel@bodymovement.com', 'testando123', 'A'),
-('171.875.952-55', 'Bruno Mattos', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/27.jpg', 'M', 'Professor', 'brumttos@bodymovement.com', 'testando123', 'A'),
-('171.875.952-55', 'Caio Oliveira', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/18.jpg', 'M', 'Professor', 'caioo@bodymovement.com', 'testando123', 'A');
+('171.875.952-56', 'Luan Augusto', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/26.jpg', 'M', 'Professor', 'luaagu@bodymovement.com', 'testando123', 'A'),
+('171.875.952-57', 'Asaph Santana', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/32.jpg', 'M', 'Professor', 'asaph@bodymovement.com', 'testando123', 'A'),
+('171.875.952-58', 'Ingrid Gomes', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/women/52.jpg', 'F', 'Recepcionista', 'ingrid@bodymovement.com', 'testando123', 'A'),
+('171.875.952-59', 'Matheus da Silva', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/25.jpg', 'M', 'Professor', 'theus@bodymovement.com', 'testando123', 'A'),
+('171.875.952-60', 'Raquel dos Santos', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/women/26.jpg', 'F', 'Recepcionista', 'raquel@bodymovement.com', 'testando123', 'A'),
+('171.875.952-61', 'Bruno Mattos', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/27.jpg', 'M', 'Professor', 'brumttos@bodymovement.com', 'testando123', 'A'),
+('171.875.952-62', 'Caio Oliveira', '(21)98564-7254', '22.238.202-0', '23040-550', 33, 'Apto 36', 'https://randomuser.me/api/portraits/men/18.jpg', 'M', 'Professor', 'caioo@bodymovement.com', 'testando123', 'A');
 
 -- --------------------------------------------------------
 
@@ -241,8 +230,29 @@ CREATE TABLE `item` (
   `iditem` int(11) NOT NULL,
   `idvenda` int(11) NOT NULL,
   `codigoproduto` int(11) NOT NULL,
-  `quantidade` int(11) NOT NULL
+  `quantidade` int(11) NOT NULL,
+  `valor` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `item`
+--
+
+INSERT INTO `item` (`iditem`, `idvenda`, `codigoproduto`, `quantidade`, `valor`) VALUES
+(1, 6, 8, 1, 55),
+(2, 6, 4, 1, 70),
+(3, 7, 13, 3, 70),
+(4, 8, 4, 2, 70),
+(5, 9, 8, 2, 55),
+(6, 10, 9, 2, 25),
+(7, 11, 4, 2, 70),
+(8, 12, 8, 2, 55),
+(9, 13, 8, 3, 55),
+(10, 14, 8, 3, 55),
+(11, 15, 8, 3, 55),
+(12, 16, 14, 3, 60),
+(13, 17, 14, 3, 60),
+(14, 18, 14, 3, 60);
 
 -- --------------------------------------------------------
 
@@ -273,7 +283,10 @@ INSERT INTO `produto` (`codigoproduto`, `nome`, `cor`, `valor`, `tamanho`, `quan
 (10, 'Vitamina E', '-', 30, '-', 50, 2, '../produtos/63e28ed6c6dfd.jpg'),
 (11, 'Protein', '-', 60, '-', 30, 2, '../produtos/63e28f23a70e6.jpg'),
 (12, 'Calcio', '-', 66, '-', 30, 2, '../produtos/63e29b40ab021.jpg'),
-(13, 'Calcio D', '-', 70, '-', 33, 2, '../produtos/63e29b673213d.jpg');
+(13, 'Calcio D', '-', 70, '-', 33, 2, '../produtos/63e29b673213d.jpg'),
+(14, 'Conjunto blue', 'Azul', 60, 'M', 27, 1, '../produtos/63e3fa5aa469a.avif'),
+(15, 'Conjunto Grey', 'Cinza', 50, 'G', 30, 1, '../produtos/63e3fa838a944.avif'),
+(16, 'Camiseta treino', 'Preto', 45, 'P', 25, 1, '../produtos/63e3fc5cc6982.avif');
 
 -- --------------------------------------------------------
 
@@ -317,7 +330,20 @@ INSERT INTO `venda` (`idvenda`, `data`, `valor`, `matricula`) VALUES
 (2, '2023-02-07', 1230, 3),
 (3, '2023-02-07', 1230, 3),
 (4, '2023-02-07', 1280, 3),
-(5, '2023-02-07', 1280, 3);
+(5, '2023-02-07', 1280, 3),
+(6, '2023-02-08', 125, 3),
+(7, '2023-02-08', 210, 3),
+(8, '2023-02-08', 140, 3),
+(9, '2023-02-08', 110, 3),
+(10, '2023-02-08', 50, 3),
+(11, '2023-02-08', 140, 3),
+(12, '2023-02-08', 110, 3),
+(13, '2023-02-08', 165, 3),
+(14, '2023-02-08', 165, 3),
+(15, '2023-02-08', 165, 3),
+(16, '2023-02-08', 180, 3),
+(17, '2023-02-08', 180, 3),
+(18, '2023-02-08', 180, 3);
 
 --
 -- Índices para tabelas despejadas
@@ -328,6 +354,46 @@ INSERT INTO `venda` (`idvenda`, `data`, `valor`, `matricula`) VALUES
 --
 ALTER TABLE `aluno`
   ADD PRIMARY KEY (`matricula`);
+
+--
+-- Índices para tabela `atividade`
+--
+ALTER TABLE `atividade`
+  ADD PRIMARY KEY (`idatividade`);
+
+--
+-- Índices para tabela `aula`
+--
+ALTER TABLE `aula`
+  ADD PRIMARY KEY (`idaula`),
+  ADD KEY `fk_idprofessor` (`idprofessor`),
+  ADD KEY `fk_idatividade` (`idatividade`);
+
+--
+-- Índices para tabela `aulaaluno`
+--
+ALTER TABLE `aulaaluno`
+  ADD PRIMARY KEY (`idaulaaluno`),
+  ADD KEY `fk_matricula` (`matricula`),
+  ADD KEY `fk_idaula` (`idaula`);
+
+--
+-- Índices para tabela `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`idcategoria`);
+
+--
+-- Índices para tabela `funcionario`
+--
+ALTER TABLE `funcionario`
+  ADD PRIMARY KEY (`cpffuncionario`);
+
+--
+-- Índices para tabela `habilitaprofessor`
+--
+ALTER TABLE `habilitaprofessor`
+  ADD PRIMARY KEY (`idhabilitacao`);
 
 --
 -- Índices para tabela `item`
@@ -341,7 +407,15 @@ ALTER TABLE `item`
 -- Índices para tabela `produto`
 --
 ALTER TABLE `produto`
-  ADD PRIMARY KEY (`codigoproduto`);
+  ADD PRIMARY KEY (`codigoproduto`),
+  ADD KEY `fk_categoria` (`idcategoria`);
+
+--
+-- Índices para tabela `professor`
+--
+ALTER TABLE `professor`
+  ADD PRIMARY KEY (`idprofessor`),
+  ADD KEY `fk_cpffuncionario` (`cpffuncionario`);
 
 --
 -- Índices para tabela `venda`
@@ -361,26 +435,76 @@ ALTER TABLE `aluno`
   MODIFY `matricula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
+-- AUTO_INCREMENT de tabela `atividade`
+--
+ALTER TABLE `atividade`
+  MODIFY `idatividade` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT de tabela `aula`
+--
+ALTER TABLE `aula`
+  MODIFY `idaula` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `aulaaluno`
+--
+ALTER TABLE `aulaaluno`
+  MODIFY `idaulaaluno` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de tabela `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `idcategoria` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT de tabela `habilitaprofessor`
+--
+ALTER TABLE `habilitaprofessor`
+  MODIFY `idhabilitacao` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de tabela `item`
 --
 ALTER TABLE `item`
-  MODIFY `iditem` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `iditem` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `produto`
 --
 ALTER TABLE `produto`
-  MODIFY `codigoproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `codigoproduto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT de tabela `professor`
+--
+ALTER TABLE `professor`
+  MODIFY `idprofessor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `venda`
 --
 ALTER TABLE `venda`
-  MODIFY `idvenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `idvenda` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Restrições para despejos de tabelas
 --
+
+--
+-- Limitadores para a tabela `aula`
+--
+ALTER TABLE `aula`
+  ADD CONSTRAINT `fk_idatividade` FOREIGN KEY (`idatividade`) REFERENCES `atividade` (`idatividade`),
+  ADD CONSTRAINT `fk_idprofessor` FOREIGN KEY (`idprofessor`) REFERENCES `professor` (`idprofessor`);
+
+--
+-- Limitadores para a tabela `aulaaluno`
+--
+ALTER TABLE `aulaaluno`
+  ADD CONSTRAINT `fk_idaula` FOREIGN KEY (`idaula`) REFERENCES `aula` (`idaula`),
+  ADD CONSTRAINT `fk_matricula` FOREIGN KEY (`matricula`) REFERENCES `aluno` (`matricula`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Limitadores para a tabela `item`
@@ -388,6 +512,18 @@ ALTER TABLE `venda`
 ALTER TABLE `item`
   ADD CONSTRAINT `fk_produto` FOREIGN KEY (`codigoproduto`) REFERENCES `produto` (`codigoproduto`),
   ADD CONSTRAINT `fk_venda` FOREIGN KEY (`idvenda`) REFERENCES `venda` (`idvenda`);
+
+--
+-- Limitadores para a tabela `produto`
+--
+ALTER TABLE `produto`
+  ADD CONSTRAINT `fk_categoria` FOREIGN KEY (`idcategoria`) REFERENCES `categoria` (`idcategoria`);
+
+--
+-- Limitadores para a tabela `professor`
+--
+ALTER TABLE `professor`
+  ADD CONSTRAINT `fk_cpffuncionario` FOREIGN KEY (`cpffuncionario`) REFERENCES `funcionario` (`cpffuncionario`);
 
 --
 -- Limitadores para a tabela `venda`

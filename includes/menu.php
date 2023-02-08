@@ -67,7 +67,9 @@
             <img src="../img/carrinho.png" style=width:50px;height:50px;></a>
             <?php 
               if($_SESSION["quant"]>0){
-                 echo $_SESSION["quant"]; 
+                 //echo $_SESSION["quant"]; 
+                 //echo $_SESSION["nome"];
+                 //echo $_SESSION["matricula"];
               }
             ?>
          

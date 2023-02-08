@@ -7,6 +7,8 @@ include_once '../includes/conexao.php';
 $totalcompra=0;
 /*total compra é acumulador entao temos que criar a variavel antes - criei a variavel aqui*/
 
+//echo $_SESSION["nome"];
+//echo $_SESSION["matricula"];
 
 $sql = "SELECT * from carrinho";
 $resultado= $conn->prepare($sql);
@@ -52,6 +54,7 @@ if(($resultado)and($resultado->RowCount()!=0)){
 
 <?php   
 } ?>
+
 <!--depois que fizer while é que mostro total da compra-->
 <tr><td><?php echo "Total da compra - R$ ".$totalcompra; ?></td></tr>
 </tbody>

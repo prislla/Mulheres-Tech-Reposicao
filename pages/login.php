@@ -31,13 +31,14 @@ if (!empty($dadoslogin['btnlogin'])) {
 
      if(password_verify($dadoslogin['senha'], $resposta['senha'])){
 
+        $_SESSION['matricula'] = $resposta['matricula'];
       $_SESSION['nome'] = $resposta['nome'];
       $_SESSION['foto'] = $resposta['foto'];
       $_SESSION['sexo'] = $resposta ['sexo'];
       $_SESSION['datanascimento'] = $resposta['datanascimento'];
 
-      if($_SESSION["carrinho"]==true){
-         $_SESSION ["matricula"] = $resposta["matricula"];
+      if($_SESSION['carrinho']==true){
+       
          header("Location:../pages/formcarrinho.php");
       }
       else{
