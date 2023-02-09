@@ -46,8 +46,8 @@ if(($resultado)and($resultado->RowCount()!=0)){
           <!--total compra é acumulador entao temos que criar a variavel antes-->
          
         <td>
-              <input type="hidden" name="codigo" value="<?php echo $codigoproduto; ?>">           
-             <input type="submit" class="btn btn-danger" name="excluir" value="Excluir">
+        <a href="../finalcarrinho.php"><button type="submit" class="btn btn-danger" name="excluir" value="<?php echo $codigoproduto; ?>">Excluir</button></a> 
+<!--o while é repetição vai pegar todos os dados e ir colocando um botão de acordo com o produto, mudando para button e colocando a variável do codigo produto pra excluir exatamente o produto que estou clicando-->
           </td>
         </tr>        
          

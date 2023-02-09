@@ -4,10 +4,10 @@
 
     include_once '../includes/conexao.php';
 
-    $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
-    $codigoproduto = $dados["codigo"];
+    //se exiiste excluir, vai criar variavel para excluir   
+    if(isset($_POST["excluir"])){
 
-    if(!empty($dados["excluir"])){
+        $codigoproduto = $_POST["excluir"];
 
         $sqlexcluir = "DELETE from carrinho where codigoproduto = $codigoproduto";
         $resulexcluir=$conn->prepare($sqlexcluir);
